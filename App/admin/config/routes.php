@@ -53,7 +53,9 @@ $route['default_controller'] = 'IndexController';
 
 
 
-//后台控制器地址
-$route['admin'] = 'admin/IndexController';
+//后台登陆地址控制器
+
+$route['login'] = 'LoginController';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

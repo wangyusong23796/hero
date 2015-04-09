@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-class IndexController extends CI_Controller {
+class LoginController extends CI_Controller {
 	
 	
 	/**
@@ -16,7 +16,7 @@ class IndexController extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->helper('form');
 	}
 	
 	
@@ -27,9 +27,12 @@ class IndexController extends CI_Controller {
 	* @return:
 	*/
 
-	public function login()
+	public function index()
 	{
 		
+		
+		
+		$this->load->view('login');
 	}
 	
 	/**
@@ -44,7 +47,7 @@ class IndexController extends CI_Controller {
 	{
 		
 	}
-	
+
 
 
 
