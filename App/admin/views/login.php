@@ -44,12 +44,16 @@
     <div class="loginbox">
     
     <ul>
-    <?php echo form_open('login/index')?>
-    <li><?php echo form_input('username', ['class'=>'loginuser']);?></li>
-    <li><input name="" type="text" class="loginpwd" value="password" /></li>
-    <li><input name="" type="button" class="loginbtn" value="登录"  />
-        <label><input name="" type="checkbox" value="" checked="checked" />记住密码</label>
-        <label><a href="#">忘记密码？</a></label></li>
+
+    <?php echo form_open('login')?>
+    <li><?php echo form_input(array('name'=> 'username','class'=>'loginuser'));?></li>
+    <li><?php echo form_password(array('name'=> 'password','class'=>'loginpwd'));?></li>
+    <li>
+        
+        <?php echo form_submit(array('class'=>'loginbtn','value'=>'登陆'))?>
+        <label><input name="rememberme" type="checkbox"  checked="checked" />记住密码</label>
+    </li>
+   <?php echo form_close()?>
     </ul>
     
     
