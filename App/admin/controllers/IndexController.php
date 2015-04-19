@@ -29,6 +29,8 @@ class IndexController extends BaseController {
 	*/
 	public function top()
 	{
+		if(empty($this->data['route']['top']))
+			show_404();
 		$this->load->view('top',$this->data);
 	}
 	
@@ -40,6 +42,8 @@ class IndexController extends BaseController {
 	 */
 	public function left()
 	{
+		if(empty($this->data['route']['left']))
+			show_404();
 		$this->load->view('left',$this->data);
 	}
 	

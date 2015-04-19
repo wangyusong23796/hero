@@ -161,6 +161,17 @@ class Auth{
 		
 	} 
 	
+	/**
+	*  获取当前用户的Routes
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function getroutes($group=NULL)
+	{
+		return $this->CI->Auth_Model->getroutes($group);
+	}
 	
 	/**
 	*  用户登出.
