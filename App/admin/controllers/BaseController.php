@@ -10,6 +10,7 @@ class BaseController extends CI_Controller {
 	* @author: 王玉松 admin@wangyusong.com
 	* @return:
 	*/
+	public $data = [];
 	
 	
 	public function __construct()
@@ -25,7 +26,13 @@ class BaseController extends CI_Controller {
 		if(!$this->auth->checkroute($this->auth->id(),$this->uri->uri_string()))
 				show_404();
 		//有访问权限则写入routes
+		//先判断一级大类目.
+		//再判断二级中等类目.
+		//再判断小级三等目录.
 		
+		$this->data['route']['gongzuotai'] = ['aaa','bbb'];
+		//读取后台用户的基础信息.
+		//$data['user'] = [];
 	}
 	
 	

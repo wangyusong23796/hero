@@ -29,7 +29,7 @@ class IndexController extends BaseController {
 	*/
 	public function top()
 	{
-		$this->load->view('top');
+		$this->load->view('top',$this->data);
 	}
 	
 	/**
@@ -40,7 +40,7 @@ class IndexController extends BaseController {
 	 */
 	public function left()
 	{
-		$this->load->view('left');
+		$this->load->view('left',$this->data);
 	}
 	
 
