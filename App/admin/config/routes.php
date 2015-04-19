@@ -55,8 +55,15 @@ $route['default_controller'] = 'IndexController';
 
 //后台登陆地址控制器
 
+//登陆控制器
 $route['login'] = 'LoginController';
 $route['logout'] = 'LoginController/logout';
+
+
+//后台基本控制器
+// 均有权限访问认证.
+$route['config'] = 'ConfigController';
+$route['config/show'] = 'ConfigController/show';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

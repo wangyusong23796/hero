@@ -127,6 +127,37 @@ class Auth{
 		
 	}
 	
+	/**
+	*  检测用户是否有访问url的权限
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function checkroute($id=NULL,$route = NULL)
+	{
+		//TODO 遍历用户组.
+		$user = $this->user($id);
+		foreach($user as $v)
+			$user = $v;
+		
+		var_dump($user);
+		die();
+		//TODO 遍历出用户组中ROUTE 
+		
+		//TODO 逐条 判断.如果存在则返回true 不存在返回flase
+		
+		
+		
+	} 
+	
+	
+	/**
+	*  用户登出.
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
 	
 	
 	public function logout()
@@ -136,8 +167,6 @@ class Auth{
 			$this->CI->session->unset_userdata('auth');
 			$this->path();
 		}
-		
-		
 	}
 	
 	
@@ -153,6 +182,7 @@ class Auth{
 		return $this->CI->Auth_Model->getuser($id);	
 	}
 	
+	
 	/**
 	*  获取已经登陆的用户id
 	* @date: 2015-4-10
@@ -162,6 +192,8 @@ class Auth{
 	
 	public function id()
 	{
+		
+		return $this->CI->session->userdata("auth")['id'];
 		
 	}
 	
