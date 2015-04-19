@@ -65,5 +65,7 @@ $route['logout'] = 'LoginController/logout';
 $route['config'] = 'ConfigController';
 $route['config/show'] = 'ConfigController/show';
 
+$route['test'] = 'TestController';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -19,9 +19,8 @@ class Auth_Model extends CI_Model{
 	
 
 	protected $config=array(
-			
 			'users' => 'admin_users', //用户表
-			'group' => 'admin_users_groups',// 用户组
+			'groups' => 'admin_users_groups',// 用户组
 			'routes'=> 'admin_users_routes' //用户访问规则表
 	);
 	
@@ -39,7 +38,7 @@ class Auth_Model extends CI_Model{
 		if($array != NULL)
 		{
 			$this->config['users'] = $array['users'];
-			$this->config['group'] = $array['group'];
+			$this->config['groups'] = $array['group'];
 			$this->config['routes'] = $array['routes'];
 		}
 	}
@@ -121,7 +120,43 @@ class Auth_Model extends CI_Model{
 		}
 		
 	}
-
+	
+	
+	/**
+	*  根据group获取routes
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function getroutes($group=NULL)
+	{
+		$this->db->like('uid',$group);
+		$this->db->from($this->config['groups']);
+		$query = $this->db->get()->result();
+		foreach($query as $v)
+			$query = $v;
+		
+		return $this->geturl($query->routeid);
+	}
+	
+	/**
+	*  根据routesid 获取 url
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function geturl($routes=NULL)
+	{
+		$route = explode(",",$routes);
+		$this->db->where_in('id',$route);
+		$this->db->from($this->config['routes']);
+		$query = $this->db->get()->result();
+		return $query;
+	}
+	
+	
 	
 	
 	

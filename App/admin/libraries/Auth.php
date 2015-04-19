@@ -16,11 +16,7 @@
 class Auth{
 	protected $CI;
 	
-	protected $config=array(
-		'users' => 'admin_users', //用户表
-		'group' => 'admin_users_groups',// 用户组
-		'routes'=> 'admin_users_routes' //用户访问规则表
-	);
+
 	
 	
 	
@@ -141,9 +137,23 @@ class Auth{
 		foreach($user as $v)
 			$user = $v;
 		
-		var_dump($user);
-		die();
+		$routes = $this->CI->Auth_Model->getroutes($user->group);
 		//TODO 遍历出用户组中ROUTE 
+		$ifroute = 0;
+		foreach($routes as $routes_v)
+		{
+			if($routes_v->route == $route)
+			{
+				$ifroute = 1;
+			}
+		}
+		if($ifroute == 1)
+		{
+			return true;
+		}else
+		{
+			return false;
+		}
 		
 		//TODO 逐条 判断.如果存在则返回true 不存在返回flase
 		

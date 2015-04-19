@@ -21,7 +21,7 @@ class BaseController extends CI_Controller {
 			show_404();
 			//redirect('/login');
 		//判断是否有访问权限
-
+		if($this->uri->uri_string() != '')
 		if(!$this->auth->checkroute($this->auth->id(),$this->uri->uri_string()))
 				show_404();
 	}
