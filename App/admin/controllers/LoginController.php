@@ -18,6 +18,7 @@ class LoginController extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('form');
 		$this->load->library('Auth');
+
 	}
 	
 	
@@ -30,41 +31,25 @@ class LoginController extends CI_Controller {
 
 	public function index()
 	{
-		//var_dump($this->auth->user());
-		//
+		if($this->auth->check())
+		{
+			redirect(site_url('/'));
+		}
 		$data = $this->input->post();
 		if(!empty($data))
 		{
 			if(!empty($data['rememberme']))
 			{
 				/* 记住密码登陆方式 */
-				$auth = $this->auth->login($data['username'],$data['password'],true);
-				
-				if($auth)
-				{
-						
-					echo '登陆成功!';
-						
-				}else{
-						
-					echo '登陆失败了';
-				}
+				/* 保存文件格式 */
+
+				$this->auth->login($data['username'],$data['password']);
 				
 			}else
 			{
 				/* 普通登陆方式  */
-				
-				$auth = $this->auth->login($data['username'],$data['password']);
-				
-				if($auth)
-				{
-					
-					echo '登陆成功!';
-					
-				}else{
-					
-					echo '登陆失败了';
-				}
+				/* 保存session */
+				$this->auth->login($data['username'],$data['password']);
 			}
 			
 		}else
@@ -83,7 +68,7 @@ class LoginController extends CI_Controller {
 	
 	public function logout()
 	{
-		
+		$this->auth->logout();
 	}
 
 

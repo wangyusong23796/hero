@@ -19,6 +19,7 @@ class Auth_Model extends CI_Model{
 	
 
 	protected $config=array(
+			
 			'users' => 'admin_users', //用户表
 			'group' => 'admin_users_groups',// 用户组
 			'routes'=> 'admin_users_routes' //用户访问规则表
@@ -72,19 +73,25 @@ class Auth_Model extends CI_Model{
 	* @return: 正确返回对象本身,错误返回false
 	*/
 	
-	
 	public function chackpassword($name=NULL,$password=NULL,$token=null)
 	{
+		$password = base64_encode($password);
 		if($this->chackname($name))
 		{
 			$query = $this->db->get_where($this->config['users'],array('user'=>$name,'password'=>$password));
+			
 			if(!empty($query))
 			{
-
-				return $query->result_array();
+				$query_val = [];
+				foreach($query->result_array() as $v)
+				{
+					$query_val = $v;
+				}
+				return $query_val;
 			}else{
 				return false;
 			}
+			
 		}else
 		{
 			return false;
@@ -114,7 +121,7 @@ class Auth_Model extends CI_Model{
 		}
 		
 	}
-	
+
 	
 	
 	

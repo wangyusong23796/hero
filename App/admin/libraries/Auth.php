@@ -37,6 +37,8 @@ class Auth{
 		$this->CI =& get_instance();
 		$this->CI->load->model('Auth_Model');
 		$this->CI->load->helper('url');
+		$this->CI->load->library('session');
+		
 	}
 	
 	
@@ -70,14 +72,18 @@ class Auth{
 			//记住密码方式的登陆
 			//base64 加密当前登陆及时间
 			
-			$token = base64_decode($time);
 			$auth = $this->CI->Auth_Model->chackpassword($user,$passwor,$token);
 			if($auth)
 			{
+				
+				$this->CI->session->set_userdata("auth",$auth);
 				$this->path();
+				
 			}else
 			{
+				
 				redirect('/login');
+				
 			}
 			
 						
@@ -85,8 +91,11 @@ class Auth{
 			//普通方式的登陆
 			
 			$auth = $this->CI->Auth_Model->chackpassword($user,$password);
+			
 			if($auth)
 			{
+				$this->CI->session->set_userdata("auth",$auth);
+				
 				$this->path();
 			}else
 			{
@@ -95,6 +104,41 @@ class Auth{
 		}
 	}
 	
+	
+	/**
+	*  判断用户是否已经登陆
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return: true or false
+	*/
+
+	public function check()
+	{
+		$auth = $this->CI->session->userdata("auth");
+		
+		$user = $this->user($auth['id']);
+
+		if($user[0]->user == $auth['user'] && $user[0]->password == $auth['password'])
+		{
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
+	
+	
+	public function logout()
+	{
+		if($this->CI->session->userdata("auth"))
+		{
+			$this->CI->session->unset_userdata('auth');
+			$this->path();
+		}
+		
+		
+	}
 	
 	
 	/**
@@ -131,7 +175,7 @@ class Auth{
 	
 	public function path()
 	{
-		redirect(site_url('index'));
+		redirect(site_url('/'));
 	}
 	
 	
