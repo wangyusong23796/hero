@@ -34,13 +34,16 @@ $(function(){
     
     <dl class="leftmenu">
         
+    <?php foreach($route['gongzuotai']['son']as $g){?>
+
+        <?php var_dump($g)?>
     <dd>
     <div class="title">
-    <span><img src="../admin/images/leftico01.png" /></span>管理信息
+    <span><img src="../admin/images/leftico01.png" /></span><?php echo $g['name']?>
     </div>
     	<ul class="menuson">
         <li><cite></cite><a href="index.html" target="rightFrame">首页模版</a><i></i></li>
-        <li class="active"><cite></cite><a href="right.html" target="rightFrame">数据列表</a><i></i></li>
+        <!-- 当前选中的样式<li class="active"><cite></cite><a href="right.html" target="rightFrame">数据列表</a><i></i></li> -->
         <li><cite></cite><a href="imgtable.html" target="rightFrame">图片数据表</a><i></i></li>
         <li><cite></cite><a href="form.html" target="rightFrame">添加编辑</a><i></i></li>
         <li><cite></cite><a href="imglist.html" target="rightFrame">图片列表</a><i></i></li>
@@ -51,7 +54,7 @@ $(function(){
         <li><cite></cite><a href="error.html" target="rightFrame">404页面</a><i></i></li>
         </ul>    
     </dd>
-        
+    <?php }?>
     
     <dd>
     <div class="title">
@@ -75,6 +78,7 @@ $(function(){
     </dd>  
     
     
+
     <dd><div class="title"><span><img src="../admin/images/leftico04.png" /></span>日期管理</div>
     <ul class="menuson">
         <li><cite></cite><a href="#">自定义</a><i></i></li>
@@ -83,7 +87,9 @@ $(function(){
         <li><cite></cite><a href="#">其他</a><i></i></li>
     </ul>
     
-    </dd>   
+    </dd>
+
+
     
     </dl>
 </body>

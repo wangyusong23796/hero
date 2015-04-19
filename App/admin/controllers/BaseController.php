@@ -75,22 +75,22 @@ class BaseController extends CI_Controller {
 // 				}
 // 			}
 // 		}
-		
-		foreach($this->data['route']['config']['son'] as $s)
+	foreach($this->data['route'] as $v){
+		if(empty($v['son']))
+			continue;
+		foreach($v['son'] as $s)
 		{
 			foreach($routes as $r)
 			{
 				if($s['id'] == $r->fid)
 				{
-					$this->data['route']['config']['son'][$s['route']]['son'] = (array)$r;
+					$v['son'][$s['route']]['son'] = (array)$r;
 				}
-				
-				
 			}
 			
 		}
 
-
+	}
 
 		//var_dump($this->data['route']['config']['son']);
 		//$this->data['route']['gongzuotai'] = ['aaa','bbb'];

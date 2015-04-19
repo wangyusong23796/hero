@@ -62,7 +62,7 @@ $route['logout'] = 'LoginController/logout';
 
 //公共导航
 $route['top'] = 'IndexController/top';
-$route['left'] = 'IndexController/left';
+$route['gongzuotai'] = 'IndexController/gongzuotai';
 
 
 

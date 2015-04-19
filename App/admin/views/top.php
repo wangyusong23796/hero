@@ -28,7 +28,7 @@ $(function(){
     <?php 
         if(!empty($route['gongzuotai']))
         {
-            echo '<li><a href="left" target="leftFrame" class="selected"><img src="../admin/images/icon01.png" title="工作台" /><h2>工作台</h2></a></li>';
+            echo '<li><a href="gongzuotai" target="leftFrame" class="selected"><img src="../admin/images/icon01.png" title="工作台" /><h2>工作台</h2></a></li>';
         }
 
     ?>

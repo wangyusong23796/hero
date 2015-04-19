@@ -35,15 +35,16 @@ class IndexController extends BaseController {
 	}
 	
 	/**
-	 *  lift 左侧导航
+	 *  工作台 左侧导航
 	 * @date: 2015-4-19
 	 * @author: 王玉松 admin@wangyusong.com
 	 * @return:
 	 */
-	public function left()
+	public function gongzuotai()
 	{
-		if(empty($this->data['route']['left']))
+		if(empty($this->data['route']['gongzuotai']))
 			show_404();
+		//var_dump($this->data['route']['gongzuotai']);
 		$this->load->view('left',$this->data);
 	}
 	
