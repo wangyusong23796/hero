@@ -54,10 +54,17 @@ $route['default_controller'] = 'IndexController';
 
 
 //后台登陆地址控制器
-
 //登陆控制器
 $route['login'] = 'LoginController';
 $route['logout'] = 'LoginController/logout';
+
+
+
+//公共导航
+$route['top'] = 'IndexController/top';
+$route['left'] = 'IndexController/left';
+
+
 
 
 //后台基本控制器

@@ -16,10 +16,33 @@ class IndexController extends BaseController {
 
 	public function index()
 	{
-		var_dump($this->session->all_userdata());
+		
+		$this->load->view('main');
 	}
 	
-
+	
+	/**
+	*  top 最上方导航..
+	* @date: 2015-4-19
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	public function top()
+	{
+		$this->load->view('top');
+	}
+	
+	/**
+	 *  lift 左侧导航
+	 * @date: 2015-4-19
+	 * @author: 王玉松 admin@wangyusong.com
+	 * @return:
+	 */
+	public function left()
+	{
+		$this->load->view('left');
+	}
+	
 
 
 }

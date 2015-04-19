@@ -23,13 +23,13 @@
     
     <div class="welinfo">
     <span><img src="images/sun.png" alt="天气" /></span>
-    <b>Admin早上好，欢迎使用信息管理系统</b>(admin@uimaker.com)
+    <b>Admin早上好，欢迎使用信息管理系统</b><?php echo $name;?>
     <a href="#">帐号设置</a>
     </div>
     
     <div class="welinfo">
     <span><img src="images/time.png" alt="时间" /></span>
-    <i>您上次登录的时间：2013-10-09 15:22</i> （不是您登录的？<a href="#">请点这里</a>）
+    <i>您上次登录的时间：2013-10-09 15:22</i> （不是您登录的？<a href="<?php echo site_url('logout')?>">请点这里</a>）
     </div>
     
     <div class="xline"></div>

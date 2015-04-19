@@ -24,6 +24,8 @@ class BaseController extends CI_Controller {
 		if($this->uri->uri_string() != '')
 		if(!$this->auth->checkroute($this->auth->id(),$this->uri->uri_string()))
 				show_404();
+		//有访问权限则写入routes
+		
 	}
 	
 	
