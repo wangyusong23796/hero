@@ -10,6 +10,7 @@ class RouteController extends BaseController{
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('form');
 		$this->load->library('Auth');
 	}
 	
@@ -27,11 +28,26 @@ class RouteController extends BaseController{
 	
 	public function edit($id=NULL)
 	{
-		//$this->auth->getmenu($id)
+		if ($this->input->post())
+		{
+			//var_dump($this->input->post());
+			$str = "";
+			$route = $this->input->post();
+			foreach($route['route'] as $v)
+			{
+				$str .= ",".$v;
+			}
+			$str  = substr($str,1);
+			
+			//group id ,$Str 字符串
+			
+			$this->auth->setgroup($id,$str);
+		}
+		$data['routes']=$this->auth->getmenu($id);
 		//获取到基本的结构.
 		$data['name'] = '权限组管理';
 		//TODO 发送到视图 并完成js
-		
+		$data['id'] = $id;
 		
 		//确定更改..
 		$this->load->view('group/edit',$data);

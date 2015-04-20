@@ -67,103 +67,66 @@ $(function(){
                 系统模块
             </th>
             <th>
-                功能权限
+                二级目录
             </th>
+            <th>权限类目</th>
         </tr>
         </thead>
 
+<?php echo form_open('routes/edit/'.$id)?>
             <tbody>
-                        <tr>
-                            <td>
-                                财务管理<input type="checkbox" name="app1" id="title"/>
-                            </td>
-                            <td>
-                                <table border="0">
-                                
-                                <tr>
-                                    <td align=left width=25%>
-                                        <input type="checkbox" name="app1function1" value = "1" checked />
-                                        &nbsp;债权转让结算列表&nbsp;&nbsp;
-                                    </td>                                   
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function2" value = "1" checked />
-                                        &nbsp;车房贷明细列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                    
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function3" value = "1" checked />
-                                        &nbsp;到期已还款客户列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                    
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function4" value = "1" checked />
-                                        &nbsp;到期还款客户列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                <tr>
-                                
-                                <tr>
-                                    <td align=left width=25%>
-                                        <input type="checkbox" name="app1function5" value = "1" checked />
-                                        &nbsp;已放款客户列表&nbsp;&nbsp;
-                                    </td>                                   
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function6" value = "1" checked />
-                                        &nbsp;待放款客户列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                    
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function7" value = "1" checked />
-                                        &nbsp;押车明细列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                    
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function8" value = "1" checked />
-                                        &nbsp;债权转让查询&nbsp;&nbsp;
-                                    
-                                    </td>
-                                <tr>
-                                
-                                <tr>
-                                    <td align=left width=25%>
-                                        <input type="checkbox" name="app1function9" value = "1" checked />
-                                        &nbsp;客户返本付息列表&nbsp;&nbsp;
-                                    </td>                                   
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function10" value = "1" checked />
-                                        &nbsp;客户返利台帐列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                    
-                                    <td align=left width=25%>
-                                    
-                                    <input type="checkbox" name="app1function11" value = "1" checked />
-                                        &nbsp;客户返利确认列表&nbsp;&nbsp;
-                                    
-                                    </td>
-                                    
-                                    <td align=left width=25%>
-                                    
-                                    </td>
-                                <tr>
 
-                                
-                                </table>
-                            </td>
-                        </tr>
+                <?php foreach($routes as $r){?>
+                    <?php foreach($r as $c){?>
+                        <?php if(!empty($c['son'])){?>
+                            <tr>
+                                    <td>
+                                        <?php echo $c['name']?><input type="checkbox" name="route[]" value="<?php echo $c['id']?>" checked/>
+                                    </td>
+                                    <td>
+                                        <?php foreach($c['son'] as $s){?>
+                                        <table border="0">
+                                            <tr>
+                                                <td>
+                                                <input type="checkbox" name="route[]" value = "<?php echo $s['id']?>" checked />
+                                                    &nbsp;<?php echo $s['name']?>&nbsp;&nbsp;
+
+                                                </td>
+
+                                            </tr>
+                                        <?php }?>
+                                        </table>
+
+                                    </td>
+
+                                    <td>
+                                    <?php foreach($c['son'] as $s){?>
+                                    <table border="0">
+                                        <tr>
+                                            <?php foreach($s['son'] as $v){?>
+                                        
+                                            <td align=left width=25%>
+                                                <input type="checkbox" name="route[]" value = "<?php echo $v['id']?>" checked />
+                                                &nbsp;<?php echo $v['name']?>&nbsp;&nbsp;
+                                            </td>       
+                                        
+                                            <?php }?>
+                                        </tr>
+                                    <?php }?>
+                                    </table>
+
+                                    </td>
+
+
+
+                            </tr>
+                        <?php }?>
+                    <?php }?>
+                <?php }?>
 
 </tbody>
+<?php echo form_submit(array('class'=>'loginbtn','value'=>'更改'))?>
+<?php echo form_close()?>
 </table>
         <div class="tip">
         <div class="tiptop"><span>提示信息</span><a></a></div>
