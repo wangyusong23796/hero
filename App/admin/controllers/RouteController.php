@@ -29,11 +29,12 @@ class RouteController extends BaseController{
 	{
 		//$this->auth->getmenu($id)
 		//获取到基本的结构.
-		
+		$data['name'] = '权限组管理';
 		//TODO 发送到视图 并完成js
 		
 		
 		//确定更改..
+		$this->load->view('group/edit',$data);
 	}
 	
 }

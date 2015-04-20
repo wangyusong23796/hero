@@ -88,11 +88,7 @@ $(document).ready(function(){
     
         <?php };?>
     </tbody>
-    
-    </table>
-    
-    
-    
+  
     
     
    
