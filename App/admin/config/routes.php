@@ -80,7 +80,7 @@ $route['user/show'] = 'UserController/show';
 
 //用户权限..
 $route['routes/group'] = 'RouteController/group';
-$route['routes/group/edit'] = 'RouteController/edit';
+$route['routes/edit/(:num)'] = 'RouteController/edit/$1';
 
 
 $route['test'] = 'TestController';

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-04-29 16:05:22
+-- Generation Time: 2015-04-20 07:22:36
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -76,24 +76,26 @@ CREATE TABLE IF NOT EXISTS `hero_admin_users_routes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   `route` varchar(255) NOT NULL,
+  `status` int(1) DEFAULT NULL,
   `fid` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `hero_admin_users_routes`
 --
 
-INSERT INTO `hero_admin_users_routes` (`id`, `name`, `route`, `fid`) VALUES
-(4, 'top菜单', 'top', 0),
-(5, '工作台', 'gongzuotai', 0),
-(6, '基本配置', 'config', 5),
-(7, '网站基本信息配置', 'config/web', 6),
-(8, '用户注册控制', 'config/reg', 6),
-(9, '用户控制', 'users', 5),
-(10, '用户管理', 'user/show', 9),
-(11, '权限管理', 'routes', 5),
-(12, '用户组管理', 'routes/group', 11);
+INSERT INTO `hero_admin_users_routes` (`id`, `name`, `route`, `status`, `fid`) VALUES
+(4, 'top菜单', 'top', 1, 0),
+(5, '工作台', 'gongzuotai', 1, 0),
+(6, '基本配置', 'config', 1, 5),
+(7, '网站基本信息配置', 'config/web', 1, 6),
+(8, '用户注册控制', 'config/reg', 1, 6),
+(9, '用户控制', 'users', 1, 5),
+(10, '用户管理', 'user/show', 1, 9),
+(11, '权限管理', 'routes', 1, 5),
+(12, '用户组管理', 'routes/group', 1, 11),
+(13, '编辑权限', 'routes\\/edit\\/?\\d*', 0, 11);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

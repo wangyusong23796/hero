@@ -123,15 +123,15 @@ class Auth_Model extends CI_Model{
 	
 	
 	/**
-	*  根据group获取routes
+	*  根据用户id获取routes
 	* @date: 2015-4-19
 	* @author: 王玉松 admin@wangyusong.com
 	* @return:
 	*/
 	
-	public function getroutes($group=NULL)
+	public function getroutes($uid=NULL)
 	{
-		$this->db->like('uid',$group);
+		$this->db->like('uid',$uid);
 		$this->db->from($this->config['groups']);
 		$query = $this->db->get()->result();
 		foreach($query as $v)
@@ -139,6 +139,29 @@ class Auth_Model extends CI_Model{
 		
 		return $this->geturl($query->routeid);
 	}
+	
+	
+	
+	/**
+	 *  根据用户id获取routes
+	 * @date: 2015-4-19
+	 * @author: 王玉松 admin@wangyusong.com
+	 * @return:
+	 */
+	
+	public function groupgetroutes($group=NULL)
+	{
+
+		$this->db->where("id",$group);
+		$this->db->from($this->config['groups']);
+		$query = $this->db->get()->result();
+
+		foreach($query as $v)
+			$query = $v;
+		
+		return $this->geturl($query->routeid);
+	}
+	
 	
 	/**
 	*  根据routesid 获取 url

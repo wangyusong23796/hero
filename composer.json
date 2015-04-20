@@ -12,9 +12,8 @@
     },
 
     "autoload":{
-        "classmap": [
-          "App/admin/models",
-          "App/index/models"
-        ]
-    }
+        "psr-4":{
+                "App\\": "App/"
+            }
+    } 
 }

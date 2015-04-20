@@ -67,8 +67,8 @@ class BaseController extends CI_Controller {
 		
 				foreach($routes as $r)
 				{
-		
-					if($s['id'] == $r->fid)
+					//判断正在显示的.
+					if($s['id'] == $r->fid && $r->status != 0)
 					{
 		
 						$this->data['route'][$v['route']]['son'][$s['route']]['son'][] = (array)$r;

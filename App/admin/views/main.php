@@ -5,10 +5,10 @@
 <title>网站管理后台 -</title>
 </head>
 <frameset rows="88,*" cols="*" frameborder="no" border="0" framespacing="0">
-  <frame src="<?php echo site_url('top')?>" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frame src="<?php echo site_url('top');?>" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
-    <frame src="<?php echo site_url('gongzuotai')?>" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-    <frame src="<?php echo site_url('index')?>" name="rightFrame" id="rightFrame" title="rightFrame" />
+    <frame src="<?php echo site_url('gongzuotai');?>" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+    <frame src="<?php echo site_url('index');?>" name="rightFrame" id="rightFrame" title="rightFrame" />
   </frameset>
 </frameset>
 <noframes><body>

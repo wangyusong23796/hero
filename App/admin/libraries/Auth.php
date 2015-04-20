@@ -142,7 +142,14 @@ class Auth{
 		$ifroute = 0;
 		foreach($routes as $routes_v)
 		{
-			if($routes_v->route == $route)
+
+			//old $routes_v->route == $route
+			//old strpos($route, $routes_v->route) === false
+			//更改成正则表达式模式..
+			//preg_match($routes_v->route,$route)
+			$v = "{".$routes_v->route."}";
+			
+			if(preg_match($v,$route))
 			{
 				$ifroute = 1;
 			}
@@ -181,7 +188,7 @@ class Auth{
 // 		foreach($user as $v)
 // 			$user = $v;
 		//获取当前用户的routes
-		$routes = $this->getroutes($group);
+		$routes = $this->groupgetroutes($group);
 		
 		//获取顶级routes
 		foreach($routes as $r)
@@ -229,6 +236,20 @@ class Auth{
 		return $data;
 	
 	}
+	
+	/**
+	*  函数用途描述
+	* @date: 2015-4-20
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function groupgetroutes($group=NULL)
+	{
+
+		return $this->CI->Auth_Model->groupgetroutes($group);
+	}
+	
 	
 	
 	/**
