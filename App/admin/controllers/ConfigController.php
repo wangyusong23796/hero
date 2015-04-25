@@ -5,7 +5,11 @@ require 'BaseController.php';
 
 class ConfigController extends BaseController{
 	
-	
+	public function __construct()
+	{
+		parent::__construct();
+			
+	}
 	public function web()
 	{
 		echo 'a';

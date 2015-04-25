@@ -15,6 +15,13 @@ class RouteController extends BaseController{
 	}
 	
 	
+	/**
+	*  权限组首页
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
 	
 	public function group()
 	{
@@ -25,6 +32,13 @@ class RouteController extends BaseController{
 		
 	}
 	
+	
+	/**
+	*  修改权限组
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
 	
 	public function edit($id=NULL)
 	{
@@ -52,6 +66,33 @@ class RouteController extends BaseController{
 		
 		//确定更改..
 		$this->load->view('group/edit',$data);
+	}
+	
+	
+	/**
+	*  添加组
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function add()
+	{
+		
+		
+	}
+	
+	
+	/**
+	*  删除组
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function delete($id)
+	{
+		
 	}
 	
 }

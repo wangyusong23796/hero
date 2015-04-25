@@ -37,6 +37,8 @@ class IndexController extends BaseController {
 	
 		$this->load->view('top',$this->data);
 	}
+
+	
 	
 	/**
 	 *  工作台 左侧导航
@@ -44,6 +46,7 @@ class IndexController extends BaseController {
 	 * @author: 王玉松 admin@wangyusong.com
 	 * @return:
 	 */
+	
 	public function gongzuotai()
 	{
 		if(empty($this->data['route']['gongzuotai']))
