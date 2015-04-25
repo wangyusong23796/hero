@@ -21,7 +21,7 @@ class Auth_Model extends CI_Model{
 	protected $config=array(
 			'users' => 'admin_users', //用户表
 			'groups' => 'admin_users_groups',// 用户组
-			'routes'=> 'admin_users_routes' //用户访问规则表
+			'routes'=> 'admin_users_routes', //用户访问规则表
 	);
 	
 	/**
@@ -40,6 +40,12 @@ class Auth_Model extends CI_Model{
 			$this->config['users'] = $array['users'];
 			$this->config['groups'] = $array['group'];
 			$this->config['routes'] = $array['routes'];
+		}else{
+			$CI =& get_instance();
+			$CI->config->load('auth');
+			$this->config['users'] = $CI->config->item('users');
+			$this->config['groups'] = $CI->config->item('groups');
+			$this->config['routes'] = $CI->config->item('routes');
 		}
 	}
 	
