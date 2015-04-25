@@ -80,7 +80,10 @@ class Auth_Model extends CI_Model{
 	
 	public function chackpassword($name=NULL,$password=NULL,$token=null)
 	{
-		$password = base64_encode($password);
+		$CI =& get_instance();
+		$CI->config->load('auth');
+		$password = base64_encode($password.$CI->config->item('key'));
+		//die($password);
 		if($this->chackname($name))
 		{
 			$query = $this->db->get_where($this->config['users'],array('user'=>$name,'password'=>$password));
