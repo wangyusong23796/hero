@@ -140,7 +140,19 @@ class Auth_Model extends CI_Model{
 		return $this->geturl($query->routeid);
 	}
 	
+	/**
+	 *  获取所有routes
+	 * @date: 2015-4-19
+	 * @author: 王玉松 admin@wangyusong.com
+	 * @return:
+	 */
 	
+	public function getallroutes()
+	{
+	
+
+		return $this->geturl();
+	}
 	
 	/**
 	 *  根据用户id获取routes
@@ -172,16 +184,34 @@ class Auth_Model extends CI_Model{
 	
 	public function geturl($routes=NULL)
 	{
-		$route = explode(",",$routes);
-		$this->db->where_in('id',$route);
-		$this->db->from($this->config['routes']);
-		$query = $this->db->get()->result();
+		if(empty($routes))
+		{
+			$this->db->from($this->config['routes']);
+			$query = $this->db->get()->result();
+		}else{
+			$route = explode(",",$routes);
+			$this->db->where_in('id',$route);
+			$this->db->from($this->config['routes']);
+			$query = $this->db->get()->result();
+		}
 		return $query;
 	}
 	
 	
+	/**
+	*  设置权限组
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
 	
-	
+	public function setgroup($id,$str)
+	{
+
+		$this->db->where('id',$id);
+		$this->db->update($this->config['groups'], ['routeid'=>$str]);
+
+	}
 	
 	
 }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-04-20 07:22:36
+-- Generation Time: 2015-04-25 09:10:06
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `hero_admin_users_groups` (
 --
 
 INSERT INTO `hero_admin_users_groups` (`id`, `name`, `uid`, `routeid`, `status`) VALUES
-(1, '超级管理员', '1', '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20', 1);
+(1, '超级管理员', '1', '4,5,6,9,11,7,8,10,12,13', 1);
 
 -- --------------------------------------------------------
 

@@ -74,6 +74,8 @@ $(function(){
         </thead>
 
 <?php echo form_open('routes/edit/'.$id)?>
+        <input type="hidden" name="route[]" value="4"/>
+
             <tbody>
 
                 <?php foreach($routes as $r){?>

@@ -181,15 +181,19 @@ class Auth{
 	}
 	
 	
-	public function getmenu($group = NULL)
+	public function getmenu($group = NULL,$n=NULL)
 	{
 		$data = [];
 // 		$user = $this->user($this->id());
 // 		foreach($user as $v)
 // 			$user = $v;
 		//获取当前用户的routes
-		$routes = $this->groupgetroutes($group);
-		
+		if($n != NULL)
+		{
+			$routes = $this->getallroutes();
+		}else{
+			$routes = $this->groupgetroutes($group);
+		}
 		//获取顶级routes
 		foreach($routes as $r)
 		{
@@ -251,6 +255,17 @@ class Auth{
 	}
 	
 	
+	/**
+	*  获取所有lutous
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function getallroutes()
+	{
+		return $this->CI->Auth_Model->getallroutes();
+	}
 	
 	/**
 	*  用户登出.
@@ -311,5 +326,16 @@ class Auth{
 	}
 	
 	
+	/**
+	*  设置权限组
+	* @date: 2015-4-25
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	
+	public function setgroup($id=NULL,$str=NULL)
+	{
+		return $this->CI->Auth_Model->setgroup($id,$str);
+	}
 	
 }

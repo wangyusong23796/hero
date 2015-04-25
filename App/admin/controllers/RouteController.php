@@ -42,8 +42,9 @@ class RouteController extends BaseController{
 			//group id ,$Str 字符串
 			
 			$this->auth->setgroup($id,$str);
+			redirect('routes/group');
 		}
-		$data['routes']=$this->auth->getmenu($id);
+		$data['routes']=$this->auth->getmenu($id,true);
 		//获取到基本的结构.
 		$data['name'] = '权限组管理';
 		//TODO 发送到视图 并完成js
