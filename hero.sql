@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-04-25 12:52:46
+-- Generation Time: 2015-04-25 13:45:18
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -96,6 +96,107 @@ INSERT INTO `hero_admin_users_routes` (`id`, `name`, `route`, `status`, `fid`) V
 (11, '权限管理', 'routes', 1, 5),
 (12, '用户组管理', 'routes/group', 1, 11),
 (13, '编辑权限', 'routes\\/edit\\/?\\d*', 0, 11);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_users`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_users` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_users_money`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_users_money` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_web_articles`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_web_articles` (
+  `id` int(11) NOT NULL DEFAULT '0',
+  `did` int(255) DEFAULT NULL,
+  `content` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_web_column`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_web_column` (
+  `id` int(255) NOT NULL DEFAULT '0',
+  `column` varchar(255) DEFAULT NULL,
+  `columntype` int(255) DEFAULT NULL,
+  `columnview` varchar(255) DEFAULT NULL,
+  `columnname` varchar(255) DEFAULT NULL,
+  `columnstatus` int(1) DEFAULT NULL,
+  `fid` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_web_config`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_web_config` (
+  `id` int(1) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `key` varchar(255) DEFAULT NULL,
+  `desc` varchar(255) DEFAULT NULL,
+  `registered` int(1) DEFAULT NULL,
+  `Keep` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_web_ducoment`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_web_ducoment` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `key` varchar(255) DEFAULT NULL,
+  `desc` varchar(9999) DEFAULT NULL,
+  `pic_thumb` varchar(255) DEFAULT NULL,
+  `columnid` int(255) DEFAULT NULL,
+  `aritcleid` int(255) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `author` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_web_link`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_web_link` (
+  `id` int(255) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `status` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
