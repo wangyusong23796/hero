@@ -96,5 +96,5 @@ $route['routes/deleteadminuser/(:num)'] = 'AdminUserController/delete/$1';
 
 $route['test'] = 'TestController';
 
-$route['404_override'] = 'ErrorController/Error404';
+$route['404_override'] = 'ErrorController/E404';
 $route['translate_uri_dashes'] = FALSE;
