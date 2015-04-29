@@ -69,8 +69,19 @@ $route['gongzuotai'] = 'IndexController/gongzuotai';
 
 //后台基本控制器
 // 均有权限访问认证.
-$route['config'] = 'ConfigController';
-$route['config/show'] = 'ConfigController/show';
+
+
+$route['config/web'] = 'ConfigController/web';
+$route['config/reg'] = 'ConfigController/reg';
+
+//用户控制
+
+$route['user/show'] = 'UserController/show';
+
+//用户权限..
+$route['routes/group'] = 'RouteController/group';
+$route['routes/group/edit'] = 'RouteController/edit';
+
 
 $route['test'] = 'TestController';
 

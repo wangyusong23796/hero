@@ -173,6 +173,64 @@ class Auth{
 		return $this->CI->Auth_Model->getroutes($group);
 	}
 	
+	
+	public function getmenu($group = NULL)
+	{
+		$data = [];
+// 		$user = $this->user($this->id());
+// 		foreach($user as $v)
+// 			$user = $v;
+		//获取当前用户的routes
+		$routes = $this->getroutes($group);
+		
+		//获取顶级routes
+		foreach($routes as $r)
+		{
+			//顶级
+			if($r->fid == 0)
+			{
+				$data['route'][$r->route] = (array)$r;
+			}
+		}
+		
+		//获取2级route
+		foreach($data['route'] as $v)
+		{
+			foreach($routes as $r){
+				if($v['id'] == $r->fid)
+				{
+					$data['route'][$v['route']]['son'][$r->route] = (array)$r;
+				}
+			}
+		}
+		
+		//获取3级 route
+		foreach($data['route'] as $v){
+			$sonname = '';
+			if(empty($v['son']))
+				continue;
+		
+			foreach($v['son'] as $s)
+			{
+		
+				foreach($routes as $r)
+				{
+		
+					if($s['id'] == $r->fid)
+					{
+		
+						$data['route'][$v['route']]['son'][$s['route']]['son'][] = (array)$r;
+					}
+				}
+					
+			}
+		
+		}
+		return $data;
+	
+	}
+	
+	
 	/**
 	*  用户登出.
 	* @date: 2015-4-19

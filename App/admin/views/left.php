@@ -30,33 +30,33 @@ $(function(){
 </head>
 
 <body style="background:#f0f9fd;">
-	<div class="lefttop"><span></span>通讯录</div>
+	<div class="lefttop"><span></span>目录</div>
     
     <dl class="leftmenu">
         
     <?php foreach($route['gongzuotai']['son']as $g){?>
 
-        <?php var_dump($g)?>
+
     <dd>
     <div class="title">
     <span><img src="../admin/images/leftico01.png" /></span><?php echo $g['name']?>
     </div>
     	<ul class="menuson">
-        <li><cite></cite><a href="index.html" target="rightFrame">首页模版</a><i></i></li>
+		<?php foreach($g['son'] as $l){?>
+		<li><cite></cite><a href="<?php echo site_url($l['route'])?>" target="rightFrame">
+		<?php echo $l['name']?>
+		</a><i></i></li>	
+		
+		<?php }?>
+
+
+
         <!-- 当前选中的样式<li class="active"><cite></cite><a href="right.html" target="rightFrame">数据列表</a><i></i></li> -->
-        <li><cite></cite><a href="imgtable.html" target="rightFrame">图片数据表</a><i></i></li>
-        <li><cite></cite><a href="form.html" target="rightFrame">添加编辑</a><i></i></li>
-        <li><cite></cite><a href="imglist.html" target="rightFrame">图片列表</a><i></i></li>
-        <li><cite></cite><a href="imglist1.html" target="rightFrame">自定义</a><i></i></li>
-        <li><cite></cite><a href="tools.html" target="rightFrame">常用工具</a><i></i></li>
-        <li><cite></cite><a href="filelist.html" target="rightFrame">信息管理</a><i></i></li>
-        <li><cite></cite><a href="tab.html" target="rightFrame">Tab页</a><i></i></li>
-        <li><cite></cite><a href="error.html" target="rightFrame">404页面</a><i></i></li>
         </ul>    
     </dd>
     <?php }?>
     
-    <dd>
+  <!--   <dd>
     <div class="title">
     <span><img src="../admin/images/leftico02.png" /></span>其他设置
     </div>
@@ -78,7 +78,7 @@ $(function(){
     </dd>  
     
     
-
+    
     <dd><div class="title"><span><img src="../admin/images/leftico04.png" /></span>日期管理</div>
     <ul class="menuson">
         <li><cite></cite><a href="#">自定义</a><i></i></li>
@@ -87,7 +87,7 @@ $(function(){
         <li><cite></cite><a href="#">其他</a><i></i></li>
     </ul>
     
-    </dd>
+    </dd> -->
 
 
     

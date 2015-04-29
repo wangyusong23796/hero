@@ -10,6 +10,7 @@ class IndexController extends BaseController {
 		
 		parent::__construct();
 		$this->load->library('session');
+		$this->load->library('Auth');
 		
 	}
 	
@@ -31,6 +32,9 @@ class IndexController extends BaseController {
 	{
 		if(empty($this->data['route']['top']))
 			show_404();
+		
+		$this->data['user'] = $this->auth->user($this->auth->id());
+	
 		$this->load->view('top',$this->data);
 	}
 	

@@ -51,53 +51,35 @@ class BaseController extends CI_Controller {
 			foreach($routes as $r){
 				if($v['id'] == $r->fid)
 				{
-					$this->data['route'][$v['route']]['son'][] = (array)$r;
+					$this->data['route'][$v['route']]['son'][$r->route] = (array)$r;
 				}
 			}
 		}
 		
 		//获取3级 route
+		foreach($this->data['route'] as $v){
+			$sonname = '';
+			if(empty($v['son']))
+				continue;
 		
-// 		foreach($this->data['route'] as $v)
-// 		{
-// 			foreach($routes as $r){
-// 				if($v['id'] == $r->fid)
-// 				{
-// 					//读取三级route
-// 					foreach($this->data['route'][$v['route']]['son'][] as $son)
-// 					{
-// 						if($son['id'] == $r->fid)
-// 						{
-// 							$this->data['route'][$v['route']]['son'][$son['route']] = (array)$r;
-// 						}
-// 					}
-					
-// 				}
-// 			}
-// 		}
-	foreach($this->data['route'] as $v){
-		if(empty($v['son']))
-			continue;
-		foreach($v['son'] as $s)
-		{
-			foreach($routes as $r)
+			foreach($v['son'] as $s)
 			{
-				if($s['id'] == $r->fid)
+		
+				foreach($routes as $r)
 				{
-					$v['son'][$s['route']]['son'] = (array)$r;
+		
+					if($s['id'] == $r->fid)
+					{
+		
+						$this->data['route'][$v['route']]['son'][$s['route']]['son'][] = (array)$r;
+					}
 				}
+					
 			}
-			
+		
 		}
-
-	}
-
-		//var_dump($this->data['route']['config']['son']);
-		//$this->data['route']['gongzuotai'] = ['aaa','bbb'];
-		//读取后台用户的基础信息.
-		//$data['user'] = [];
-	}
-	
+		}
+		
 	
 	
 

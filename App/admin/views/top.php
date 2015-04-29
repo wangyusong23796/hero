@@ -42,13 +42,13 @@ $(function(){
             
     <div class="topright">    
     <ul>
-    <li><span><img src="../admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-    <li><a href="login.html" target="_parent">退出</a></li>
+    <li><span><img src="../admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="<?php echo site_url('help')?>">帮助</a></li>
+    <li><a href="<?php echo site_url('about')?>">关于</a></li>
+    <li><a href="<?php echo site_url('logout')?>" target="_parent">退出</a></li>
     </ul>
      
     <div class="user">
-    <span>admin</span>
+    <span><?php echo $user[0]->username ?></span>
     <i>消息</i>
     <b>5</b>
     </div>    
