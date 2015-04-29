@@ -1,24 +1,32 @@
-/*
-Navicat MySQL Data Transfer
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 2015-04-29 16:05:22
+-- 服务器版本： 5.6.17
+-- PHP Version: 5.5.12
 
-Source Server         : 本机
-Source Server Version : 50617
-Source Host           : localhost:3306
-Source Database       : hero
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-Target Server Type    : MYSQL
-Target Server Version : 50617
-File Encoding         : 65001
 
-Date: 2015-04-19 18:09:00
-*/
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
-SET FOREIGN_KEY_CHECKS=0;
--- ----------------------------
--- Table structure for `hero_admin_users`
--- ----------------------------
-DROP TABLE IF EXISTS `hero_admin_users`;
-CREATE TABLE `hero_admin_users` (
+--
+-- Database: `hero`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_admin_users`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_admin_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -26,49 +34,67 @@ CREATE TABLE `hero_admin_users` (
   `remamberme` varchar(255) NOT NULL,
   `group` int(11) NOT NULL,
   PRIMARY KEY (`id`,`user`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='后台管理员用户表';
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='后台管理员用户表' AUTO_INCREMENT=3 ;
 
--- ----------------------------
--- Records of hero_admin_users
--- ----------------------------
-INSERT INTO `hero_admin_users` VALUES ('1', 'admin', 'd29haW5pNTIx', '管理员', '', '1');
-INSERT INTO `hero_admin_users` VALUES ('2', 'wangyusong', 'd29haW5pNTIx', '王玉松', '', '1');
+--
+-- 转存表中的数据 `hero_admin_users`
+--
 
--- ----------------------------
--- Table structure for `hero_admin_users_groups`
--- ----------------------------
-DROP TABLE IF EXISTS `hero_admin_users_groups`;
-CREATE TABLE `hero_admin_users_groups` (
+INSERT INTO `hero_admin_users` (`id`, `user`, `password`, `username`, `remamberme`, `group`) VALUES
+(1, 'admin', 'd29haW5pNTIx', '管理员', '', 1),
+(2, 'wangyusong', 'd29haW5pNTIx', '王玉松', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_admin_users_groups`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_admin_users_groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(80) COLLATE utf16_estonian_ci NOT NULL,
   `uid` varchar(255) COLLATE utf16_estonian_ci NOT NULL,
   `routeid` varchar(255) COLLATE utf16_estonian_ci NOT NULL,
   `status` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci AUTO_INCREMENT=2 ;
 
--- ----------------------------
--- Records of hero_admin_users_groups
--- ----------------------------
-INSERT INTO `hero_admin_users_groups` VALUES ('1', '超级管理员', '1', '1,2,3,4,5,6,7,8,9,10', '1');
+--
+-- 转存表中的数据 `hero_admin_users_groups`
+--
 
--- ----------------------------
--- Table structure for `hero_admin_users_routes`
--- ----------------------------
-DROP TABLE IF EXISTS `hero_admin_users_routes`;
-CREATE TABLE `hero_admin_users_routes` (
+INSERT INTO `hero_admin_users_groups` (`id`, `name`, `uid`, `routeid`, `status`) VALUES
+(1, '超级管理员', '1', '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `hero_admin_users_routes`
+--
+
+CREATE TABLE IF NOT EXISTS `hero_admin_users_routes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   `route` varchar(255) NOT NULL,
   `fid` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
--- ----------------------------
--- Records of hero_admin_users_routes
--- ----------------------------
-INSERT INTO `hero_admin_users_routes` VALUES ('1', '网站基本配置', 'config', '0');
-INSERT INTO `hero_admin_users_routes` VALUES ('2', '查看基本配置', 'config/show', '1');
-INSERT INTO `hero_admin_users_routes` VALUES ('3', '测试', 'test', '0');
-INSERT INTO `hero_admin_users_routes` VALUES ('4', 'top菜单', 'top', '0');
-INSERT INTO `hero_admin_users_routes` VALUES ('5', 'left菜单栏', 'left', '1');
+--
+-- 转存表中的数据 `hero_admin_users_routes`
+--
+
+INSERT INTO `hero_admin_users_routes` (`id`, `name`, `route`, `fid`) VALUES
+(4, 'top菜单', 'top', 0),
+(5, '工作台', 'gongzuotai', 0),
+(6, '基本配置', 'config', 5),
+(7, '网站基本信息配置', 'config/web', 6),
+(8, '用户注册控制', 'config/reg', 6),
+(9, '用户控制', 'users', 5),
+(10, '用户管理', 'user/show', 9),
+(11, '权限管理', 'routes', 5),
+(12, '用户组管理', 'routes/group', 11);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
