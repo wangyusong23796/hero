@@ -52,16 +52,18 @@ $(document).ready(function(){
     <div class="tools">
     
     	<ul class="toolbar">
-        <li class="click"><span><img src="../../admin/images/t01.png" /></span>添加</li>
-        <li class="click"><span><img src="../../admin/images/t02.png" /></span>修改</li>
+
+        <a href="<?php echo site_url('routes/addgroup')?>"><li class="click"><span><img src="../../admin/images/t01.png" /></span>添加</li></a>
+<!--         <li class="click"><span><img src="../../admin/images/t02.png" /></span>修改</li>
         <li><span><img src="../../admin/images/t03.png" /></span>删除</li>
-        <li><span><img src="../../admin/images/t04.png" /></span>统计</li>
+        <li><span><img src="../../admin/images/t04.png" /></span>统计</li> -->
+
         </ul>
         
-        
+<!--         
         <ul class="toolbar1">
         <li><span><img src="../../admin/images/t05.png" /></span>设置</li>
-        </ul>
+        </ul> -->
     
     </div>
     
@@ -70,78 +72,27 @@ $(document).ready(function(){
     
     <thead>
     <tr>
-    <th width="100px;">缩略图</th>
-    <th>标题</th>
-    <th>栏目</th>
-    <th>权限</th>
-    <th>发布人</th>
-    <th>是否审核</th>
-    <th>点击</th>
+		<th width="100px;">权限名称</th>
+		<th>状态</th>
+        <th>操作</th>
     </tr>
     </thead>
     
     <tbody>
+        <?php foreach($groups as $v){ ?>
+        <tr>
+            <td><?php echo $v->name?></td>
+            <td><?php if($v->status == 1){echo "开启";}else{echo '禁用';};?></td>
+            <td><a href="<?php echo site_url('routes/edit').'/'.$v->id?>">编辑</a>&nbsp;<a href="<?php echo site_url('routes/delete').'/'.$v->id?>">删除</a></td>
+        </tr>
     
-    <tr>
-    <td class="imgtd"><img src="images/img11.png" /></td>
-    <td><a href="#">非常不错的国外后台模板，支持HTML5</a><p>发布时间：2013-10-12 09:25:18</p></td>
-    <td>后台界面<p>ID: 82122</p></td>
-    <td>开放浏览</td>
-    <td>admin</td>
-    <td>已审核</td>
-    <td>128</td>
-    </tr>
-    
-    <tr>
-    <td class="imgtd"><img src="images/img12.png" /></td>
-    <td><a href="#">一套简约形状图标UI下载</a><p>发布时间：2013-10-12 09:25:18</p></td>
-    <td>图标设计<p>ID: 82122</p></td>
-    <td>开放浏览</td>
-    <td>uimaker</td>
-    <td><i>未审核</i></td>
-    <td>235</td>
-    </tr>
-    
-    <tr>
-    <td class="imgtd"><img src="images/img13.png" /></td>
-    <td><a href="#">配色软件界面设计PSD下载</a><p>发布时间：2013-10-12 09:25:18</p></td>
-    <td>软件界面<p>ID: 82122</p></td>
-    <td>开放浏览</td>
-    <td>admin</td>
-    <td>已审核</td>
-    <td>100</td>
-    </tr>
-    
-    <tr>
-    <td class="imgtd"><img src="images/img14.png" /></td>
-    <td><a href="#">uimaker.com分享-123张switch界面UI设计</a><p>发布时间：2013-10-12 09:25:18</p></td>
-    <td>图标设计<p>ID: 82122</p></td>
-    <td>开放浏览</td>
-    <td>user</td>
-    <td>已审核</td>
-    <td>96</td>
-    </tr>
-    
-    <tr>
-    <td class="imgtd"><img src="images/img15.png" /></td>
-    <td><a href="#">章鱼图标PSD源文件下载</a><p>发布时间：2013-10-12 09:25:18</p></td>
-    <td>界面设计<p>ID: 82122</p></td>
-    <td>开放浏览</td>
-    <td>admin</td>
-    <td>已审核</td>
-    <td>45</td>
-    </tr>
-    
+        <?php };?>
     </tbody>
-    
-    </table>
-    
-    
-    
+  
     
     
    
-    <div class="pagin">
+<!--     <div class="pagin">
     	<div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
         <ul class="paginList">
         <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
@@ -184,7 +135,7 @@ $(document).ready(function(){
     	<div class="tiptop"><span>提示信息</span><a></a></div>
         
       <div class="tipinfo">
-        <span><img src="images/ticon.png" /></span>
+        <span><img src="../../admin/images/ticon.png" /></span>
         <div class="tipright">
         <p>是否确认对信息的修改 ？</p>
         <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
@@ -196,7 +147,7 @@ $(document).ready(function(){
         <input name="" type="button"  class="cancel" value="取消" />
         </div>
     
-    </div>
+    </div> -->
     
 <script type="text/javascript">
 	$('.imgtable tbody tr:odd').addClass('odd');

@@ -338,4 +338,31 @@ class Auth{
 		return $this->CI->Auth_Model->setgroup($id,$str);
 	}
 	
+	/**
+	* 创建用户组
+	* tags
+	* @param unknowtype
+	* @return return_type
+	* @author Wang yusong
+	* @date 2015-5-5下午8:20:24
+	* @version v1.0.0
+	*/ 
+	public function creategroup($array=[])
+	{
+		return $this->CI->Auth_Model->creategroup($array);
+	}
+	
+	/**
+	 * 删除用户组
+	 * tags
+	 * @param unknowtype
+	 * @return return_type
+	 * @author Wang yusong
+	 * @date 2015-5-5下午8:20:24
+	 * @version v1.0.0
+	 */
+	public function deletegroup($id)
+	{
+		return $this->CI->Auth_Model->deletegroup($id);
+	}
 }

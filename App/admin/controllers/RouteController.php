@@ -76,10 +76,26 @@ class RouteController extends BaseController{
 	* @return:
 	*/
 	
-	public function add()
+	public function addgroup()
 	{
-		
-		
+		if ($this->input->post())
+		{
+			
+			$str = "";
+			$route = $this->input->post();
+			foreach($route['route'] as $v)
+			{
+				$str .= ",".$v;
+			}
+			$str  = substr($str,1);
+			$data = ['name'=>$route['groupname'],'uid'=>'','routeid'=>$str,'status'=>$route['status']];
+			$this->auth->creategroup($data);
+			
+			redirect('routes/group');
+		}
+		$data['routes']=$this->auth->getmenu(1,true);
+		$data['name'] = '添加权限组';
+		$this->load->view('group/addgroup',$data);
 	}
 	
 	
@@ -92,7 +108,9 @@ class RouteController extends BaseController{
 	
 	public function delete($id)
 	{
+		$this->auth->deletegroup($id);
 		
+		redirect('routes/group');
 	}
 	
 }

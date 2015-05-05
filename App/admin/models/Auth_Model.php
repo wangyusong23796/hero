@@ -223,4 +223,34 @@ class Auth_Model extends CI_Model{
 	}
 	
 	
+	/**
+	* 创建group
+	* tags
+	* @param unknowtype
+	* @return return_type
+	* @author Wang yusong
+	* @date 2015-5-5下午8:10:39
+	* @version v1.0.0
+	*/ 
+	
+	public function creategroup($array=[])
+	{
+		$this->db->insert($this->config['groups'], $array);
+	}
+	
+	/**
+	 * 删除group
+	 * tags
+	 * @param unknowtype
+	 * @return return_type
+	 * @author Wang yusong
+	 * @date 2015-5-5下午8:10:39
+	 * @version v1.0.0
+	 */
+	
+	public function deletegroup($id=null)
+	{
+		return $this->db->delete($this->config['groups'], array('id' => $id));
+	}
+	
 }

@@ -81,6 +81,12 @@ $route['user/show'] = 'UserController/show';
 //用户权限..
 $route['routes/group'] = 'RouteController/group';
 $route['routes/edit/(:num)'] = 'RouteController/edit/$1';
+$route['routes/delete/(:num)'] = 'RouteController/delete/$1';
+//添加权限
+$route['routes/addgroup'] = 'RouteController/addgroup';
+
+//添加用户
+$route['routes/adminuser'] = 'AdminUserController/index';
 
 
 $route['test'] = 'TestController';
