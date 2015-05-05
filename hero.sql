@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-04-25 13:45:18
+-- Generation Time: 2015-05-05 15:02:41
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `hero_admin_users` (
 --
 
 INSERT INTO `hero_admin_users` (`id`, `user`, `password`, `username`, `remamberme`, `group`) VALUES
-(1, 'admin', 'd29haW5pNTIx', '管理员', '', 1),
-(2, 'wangyusong', 'd29haW5pNTIx', '王玉松', '', 1);
+(1, 'admin', 'd29haW5pNTIxd2FuZ3l1c29uZ2RzYWRhc2RzYWRhc2Q=', '管理员', '', 1),
+(2, 'wangyusong', 'd29haW5pNTIxd2FuZ3l1c29uZ2RzYWRhc2RzYWRhc2Q=', '王玉松', '', 1);
 
 -- --------------------------------------------------------
 
@@ -57,14 +57,15 @@ CREATE TABLE IF NOT EXISTS `hero_admin_users_groups` (
   `routeid` varchar(255) COLLATE utf16_estonian_ci NOT NULL,
   `status` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `hero_admin_users_groups`
 --
 
 INSERT INTO `hero_admin_users_groups` (`id`, `name`, `uid`, `routeid`, `status`) VALUES
-(1, '超级管理员', '1', '4,5,6,9,11,7,8,10,12,13', 1);
+(1, '超级管理员', '1', '4,5,6,9,11,7,8,10,12,13,14,15,16', 1),
+(3, '测试用户组', '', '4,5,9,11,10,12,13,14,15,16', 1);
 
 -- --------------------------------------------------------
 
@@ -79,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `hero_admin_users_routes` (
   `status` int(1) DEFAULT NULL,
   `fid` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- 转存表中的数据 `hero_admin_users_routes`
@@ -95,7 +96,10 @@ INSERT INTO `hero_admin_users_routes` (`id`, `name`, `route`, `status`, `fid`) V
 (10, '用户管理', 'user/show', 1, 9),
 (11, '权限管理', 'routes', 1, 5),
 (12, '用户组管理', 'routes/group', 1, 11),
-(13, '编辑权限', 'routes\\/edit\\/?\\d*', 0, 11);
+(13, '编辑权限', 'routes\\/edit\\/?\\d*', 0, 11),
+(14, '添加用户组', 'routes/addgroup', 0, 11),
+(15, '后台用户管理', 'routes/adminuser', 1, 11),
+(16, '删除用户组', 'routes\\/delete\\/?\\d*', 0, 11);
 
 -- --------------------------------------------------------
 

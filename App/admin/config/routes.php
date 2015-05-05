@@ -78,15 +78,20 @@ $route['config/reg'] = 'ConfigController/reg';
 
 $route['user/show'] = 'UserController/show';
 
-//用户权限..
+//后台用户权限..
 $route['routes/group'] = 'RouteController/group';
 $route['routes/edit/(:num)'] = 'RouteController/edit/$1';
 $route['routes/delete/(:num)'] = 'RouteController/delete/$1';
-//添加权限
 $route['routes/addgroup'] = 'RouteController/addgroup';
 
-//添加用户
+//后台路由管理
+
+
+//后台用户
 $route['routes/adminuser'] = 'AdminUserController/index';
+$route['routes/editadminuser/(:num)'] = 'AdminUserController/edit/$1';
+$route['routes/createadminuser'] = 'AdminUserController/create';
+$route['routes/deleteadminuser/(:num)'] = 'AdminUserController/delete/$1';
 
 
 $route['test'] = 'TestController';
