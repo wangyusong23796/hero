@@ -138,9 +138,9 @@ class Auth_Model extends CI_Model{
 	* @return:
 	*/
 	
-	public function getroutes($uid=NULL)
+	public function getroutes($id=NULL)
 	{
-		$this->db->like('uid',$uid);
+		$this->db->where('id',$id);
 		$this->db->from($this->config['groups']);
 		$query = $this->db->get()->result();
 		foreach($query as $v)

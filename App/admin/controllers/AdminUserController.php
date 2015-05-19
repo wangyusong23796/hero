@@ -26,6 +26,7 @@ class AdminUserController extends BaseController {
 	{
 		$data['user'] = AdminUser::all();
 		$data['name'] = '后台用户管理';
+		//
 		$this->load->view('adminuser/index',$data);
 	}
 	
@@ -74,9 +75,9 @@ class AdminUserController extends BaseController {
 	
 	public function create()
 	{
-	
-		
-	}
+
+		$this->load->view('adminuser/create');
+	}	
 	
 	
 }

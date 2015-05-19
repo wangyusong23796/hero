@@ -23,7 +23,7 @@
     
     <div class="welinfo">
     <span><img src="images/sun.png" alt="天气" /></span>
-    <b>Admin早上好，欢迎使用信息管理系统</b><?php echo $name;?>
+    <b><?php echo $name;?>早上好，欢迎使用信息管理系统</b><?php echo $name;?>
     <a href="#">帐号设置</a>
     </div>
     

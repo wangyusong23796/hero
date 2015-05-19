@@ -17,8 +17,8 @@ class IndexController extends BaseController {
 
 	public function index()
 	{
-		
-		$this->load->view('main');
+		$data['name'] = "cms";
+		$this->load->view('main',$data);
 	}
 	
 	

@@ -53,7 +53,7 @@ $(document).ready(function(){
     
     	<ul class="toolbar">
 
-        <a href="<?php echo site_url('routes/createadminuser')?>"><li class="click"><span><img src="../../admin/images/t01.png" /></span>添加</li></a>
+        <a href="<?php echo site_url('lanmu/add')?>"><li class="click"><span><img src="../../admin/images/t01.png" /></span>添加</li></a>
 <!--         <li class="click"><span><img src="../../admin/images/t02.png" /></span>修改</li>
         <li><span><img src="../../admin/images/t03.png" /></span>删除</li>
         <li><span><img src="../../admin/images/t04.png" /></span>统计</li> -->
@@ -72,23 +72,23 @@ $(document).ready(function(){
     
     <thead>
     <tr>
-		<th width="100px;">用户名称</th>
-		<th>用户名</th>
-		<th>用户的组</th>	
+		<th width="100px;">栏目名称</th>
+		<th>是否显示</th>
         <th>操作</th>
     </tr>
     </thead>
     
     <tbody>
-        <?php foreach($user as $v){ ?>
+        <?php foreach($lanmu as $v):?>
         <tr>
-            <td><?php echo $v->username?></td>
-            <td><?php echo $v->user?></td>
-			<td><?php echo $v->group?></td>
-            <td><a href="<?php echo site_url('routes/editadminuser').'/'.$v->id?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('routes/deleteadminuser').'/'.$v->id?>">删除</a></td>
+           <td><?php echo $v->name;?></td>
+           <td><?php if($v->name == 1){echo '是';}else{echo '否';}?></td>
+           <td><a href="<?php echo site_url('lanmu/edit/'.$v->id)?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('lanmu/delete/'.$v->id)?>">删除</a></td>
+
+
         </tr>
     
-        <?php };?>
+        <?php endforeach;?>
     </tbody>
   
     

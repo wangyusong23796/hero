@@ -70,23 +70,10 @@ $route['gongzuotai'] = 'IndexController/gongzuotai';
 //后台基本控制器
 // 均有权限访问认证.
 
-//基本配置
+
 $route['config/web'] = 'ConfigController/web';
-//栏目管理
-$route['lanmu/index'] = 'ColumnController/index';
-$route['lanmu/add'] = 'ColumnController/add';
-$route['lanmu/update'] = 'ColumnController/update';
-$route['lanmu/delete/(:num)'] = 'ColumnController/delete/$1';
-$route['lanmu/edit/(:num)'] = 'ColumnController/index/$1';
+$route['config/reg'] = 'ConfigController/reg';
 
-
-
-//文章管理
-$route['article/index'] = 'ArticleController/index';
-// $route['lanmu/add'] = 'ColumnController/add';
-// $route['lanmu/update'] = 'ColumnController/update';
-// $route['lanmu/delete/(:num)'] = 'ColumnController/delete/$1';
-// $route['lanmu/edit/(:num)'] = 'ColumnController/index/$1';
 //用户控制
 
 $route['user/show'] = 'UserController/show';
@@ -109,5 +96,5 @@ $route['routes/deleteadminuser/(:num)'] = 'AdminUserController/delete/$1';
 
 $route['test'] = 'TestController';
 
-$route['404_override'] = 'ErrorController/Error404';
+$route['404_override'] = 'ErrorController/E404';
 $route['translate_uri_dashes'] = FALSE;
