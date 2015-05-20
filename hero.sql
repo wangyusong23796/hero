@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-05-18 16:04:02
+-- Generation Time: 2015-05-19 11:59:20
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -224,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `hero_web_daohangs` (
   `viewpath` varchar(255) DEFAULT NULL COMMENT '封面模板',
   `display` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf32 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

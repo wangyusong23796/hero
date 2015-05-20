@@ -282,6 +282,9 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder);
 
+
+//引入自定义
+require APPPATH.'../class/eloquent.php';
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

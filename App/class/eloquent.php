@@ -11,6 +11,9 @@ require BASEPATH.'../vendor/autoload.php';
 
 require_once APPPATH.'../config/database.php';
 
+//切换视图引擎.
+\duncan3dc\Helpers\Env::usePath(VIEWPATH);
+
 // Eloquent ORM
 
 $capsule = new Capsule;
