@@ -1,16 +1,5 @@
-<<<<<<< HEAD
 /*
 Navicat MySQL Data Transfer
-=======
--- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: 2015-06-25 11:36:27
--- 服务器版本： 5.6.17
--- PHP Version: 5.5.12
->>>>>>> eeaf7f2b9f733634454aec2bce25ae591f2abf7b
 
 Source Server         : localhost_3306
 Source Server Version : 50617
@@ -21,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-22 13:29:52
+Date: 2015-05-22 18:01:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,7 +26,6 @@ CREATE TABLE `hero_admin_users` (
   `username` varchar(32) NOT NULL,
   `remamberme` varchar(255) NOT NULL,
   `group` int(11) NOT NULL,
-<<<<<<< HEAD
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='后台管理员用户表';
 
@@ -52,32 +40,11 @@ INSERT INTO `hero_admin_users` VALUES ('2', 'wangyusong', 'd29haW5pNTIxd2FuZ3l1c
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_admin_users_groups`;
 CREATE TABLE `hero_admin_users_groups` (
-=======
-  PRIMARY KEY (`id`,`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='后台管理员用户表' AUTO_INCREMENT=3 ;
-
---
--- 转存表中的数据 `hero_admin_users`
---
-
-INSERT INTO `hero_admin_users` (`id`, `user`, `password`, `username`, `remamberme`, `group`) VALUES
-(1, 'admin', 'd29haW5pNTIxd2FuZ3l1c29uZ2RzYWRhc2RzYWRhc2Q=', '管理员', '', 1),
-(2, 'wangyusong', 'd29haW5pNTIxd2FuZ3l1c29uZ2RzYWRhc2RzYWRhc2Q=', '王玉松', '', 3);
-
--- --------------------------------------------------------
-
---
--- 表的结构 `hero_admin_users_groups`
---
-
-CREATE TABLE IF NOT EXISTS `hero_admin_users_groups` (
->>>>>>> eeaf7f2b9f733634454aec2bce25ae591f2abf7b
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(80) COLLATE utf16_estonian_ci NOT NULL,
   `routeid` varchar(255) COLLATE utf16_estonian_ci NOT NULL,
   `status` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci;
 
 -- ----------------------------
@@ -91,32 +58,12 @@ INSERT INTO `hero_admin_users_groups` VALUES ('3', '测试用户组', '4,5,6,9,1
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_admin_users_routes`;
 CREATE TABLE `hero_admin_users_routes` (
-=======
-) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_estonian_ci AUTO_INCREMENT=4 ;
-
---
--- 转存表中的数据 `hero_admin_users_groups`
---
-
-INSERT INTO `hero_admin_users_groups` (`id`, `name`, `routeid`, `status`) VALUES
-(1, '超级管理员', '4,5,6,9,11,7,8,10,12,13,14,15,16,17,18', 1),
-(3, '测试用户组', '4,5,6,9,11,7,8,10,12,13,14,15,16', 1);
-
--- --------------------------------------------------------
-
---
--- 表的结构 `hero_admin_users_routes`
---
-
-CREATE TABLE IF NOT EXISTS `hero_admin_users_routes` (
->>>>>>> eeaf7f2b9f733634454aec2bce25ae591f2abf7b
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(80) NOT NULL,
   `route` varchar(255) NOT NULL,
   `status` int(1) DEFAULT NULL,
   `fid` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -155,39 +102,6 @@ CREATE TABLE `hero_users` (
   `username` varchar(32) NOT NULL,
   `password` varchar(100) NOT NULL,
   `nikename` varchar(32) NOT NULL,
-=======
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
-
---
--- 转存表中的数据 `hero_admin_users_routes`
---
-
-INSERT INTO `hero_admin_users_routes` (`id`, `name`, `route`, `status`, `fid`) VALUES
-(4, 'top菜单', 'top', 1, 0),
-(5, '工作台', 'gongzuotai', 1, 0),
-(6, '基本配置', 'config', 1, 5),
-(7, '网站基本信息配置', 'config/web', 1, 6),
-(8, '用户注册控制', 'config/reg', 1, 6),
-(9, '用户控制', 'users', 1, 5),
-(10, '用户管理', 'user/show', 1, 9),
-(11, '权限管理', 'routes', 1, 5),
-(12, '用户组管理', 'routes/group', 1, 11),
-(13, '编辑权限', 'routes\\/edit\\/?\\d*', 0, 11),
-(14, '添加用户组', 'routes/addgroup', 0, 11),
-(15, '后台用户管理', 'routes/adminuser', 1, 11),
-(16, '删除用户组', 'routes\\/delete\\/?\\d*', 0, 11),
-(17, '添加用户', 'routes/createadminuser', 0, 11),
-(18, '删除用户', 'routes\\/deleteadminuser\\/?\\d*', 0, 11);
-
--- --------------------------------------------------------
-
---
--- 表的结构 `hero_users`
---
-
-CREATE TABLE IF NOT EXISTS `hero_users` (
-  `id` int(255) NOT NULL DEFAULT '0',
->>>>>>> eeaf7f2b9f733634454aec2bce25ae591f2abf7b
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
 

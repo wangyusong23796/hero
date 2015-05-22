@@ -27,7 +27,22 @@ class news extends BaseController
 	
 	public function index($id)
 	{
+		if($id == NULL)
+			show_404();
+		$document = $this->_Document_findtype($id);
+		if(empty($document->toArray()))
+			show_404();
 		
+		$this->load->view('news/index');
+		$this->load->view('public/foot');
+	}
+	public function _Document_findtype($type)
+	{
+		$document= WebDocument::where('article_id','=',$type)->get();
+		
+		foreach($document as $v)
+			$document = $v;
+		return  $document;
 	}
 	
 	
