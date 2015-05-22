@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>咨询快递</title>
+<title><?php echo $webconfig['titile']?></title>
 <link href="/index/style/index.css" rel="stylesheet" type="text/css" />
 <link href="/index/style/Everyone.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="/index/jQuery/jquery-1.11.2.min.js"></script>
@@ -23,7 +23,7 @@
         </ul>
         <dl class="top_right">
         	<dd class="top_right1" style=" cursor:default;">移动设备与微信
-            	<div class="top_right1_img"><img src="images/CG_03.png" /></div>
+            	<div class="top_right1_img"><img src="/index/images/CG_03.png" /></div>
             </dd>
             <dt class="top_right2">|</dt>
             <a href="#"><dd class="top_right1">实时动态</dd></a>

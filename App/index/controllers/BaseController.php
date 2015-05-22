@@ -22,6 +22,8 @@ class BaseController extends CI_Controller{
 		$this->data['webconfig'] = WebConfig::find(1);
 		
 		$this->data['topdaohang'] = $this->gettopdaohang();
+		
+		$this->data['foot'] = $this->getfoot(); 
 
 		$this->load->view('public/head',$this->data);
 	}
@@ -31,4 +33,9 @@ class BaseController extends CI_Controller{
 		return WebDaohang::where('fid','=',0)->get();
 	}
 
+	
+	public function getfoot()
+	{
+		return WebDaohang::where('fid','=',0)->get();
+	}
 }

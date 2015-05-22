@@ -3,8 +3,8 @@
 <div class="banner">
 	<div class="banner_tv">
         <ul class="banner_img">
-            <li class="banner_img1"><img src="images/banner_img1_1.png" /></li>
-            <li class="banner_img1"><img src="images/banner_img1_2.png" /></li>
+            <li class="banner_img1"><img src="/index/images/banner_img1_1.png" /></li>
+            <li class="banner_img1"><img src="/index/images/banner_img1_2.png" /></li>
         </ul>
     </div>
     <ul class="banner_but">
@@ -27,35 +27,35 @@
                 <li class="one_a3a"><span>with</span>&nbsp;1&nbsp;评论</li>
             </ul>
         </div>
-        <a href="#"><div class="one_b"><img src="images/one_b1.png" alt="图片" title="图片" /></div></a>
+        <a href="#"><div class="one_b"><img src="/index/images/one_b1.png" alt="图片" title="图片" /></div></a>
         <div class="one_c">
         	<div class="one_c1">
             	<a href="#"><ul class="one_c1a">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1alion">zbrush结合photoshop创作卡通插视频教学创作卡通插视频教学创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
             <div class="one_c1">
             	<a href="#"><ul class="one_c1a one_c1c">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
             <div class="one_c1">
             	<a href="#"><ul class="one_c1a">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
@@ -77,35 +77,35 @@
                 <li class="one_a3a"><span>with</span>&nbsp;1&nbsp;评论</li>
             </ul>
         </div>
-        <a href="#"><div class="one_b"><img src="images/one_b1.png" alt="图片" title="图片" /></div></a>
+        <a href="#"><div class="one_b"><img src="/index/images/one_b1.png" alt="图片" title="图片" /></div></a>
         <div class="one_c">
         	<div class="one_c1">
             	<a href="#"><ul class="one_c1a">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
             <div class="one_c1">
             	<a href="#"><ul class="one_c1a one_c1c">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
             <div class="one_c1">
             	<a href="#"><ul class="one_c1a">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
@@ -127,35 +127,35 @@
                 <li class="one_a3a"><span>with</span>&nbsp;1&nbsp;评论</li>
             </ul>
         </div>
-        <a href="#"><div class="one_b"><img src="images/one_b1.png" alt="图片" title="图片" /></div></a>
+        <a href="#"><div class="one_b"><img src="/index/images/one_b1.png" alt="图片" title="图片" /></div></a>
         <div class="one_c">
         	<div class="one_c1">
             	<a href="#"><ul class="one_c1a">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
             <div class="one_c1">
             	<a href="#"><ul class="one_c1a one_c1c">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
             </div>
             <div class="one_c1">
             	<a href="#"><ul class="one_c1a">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学</li>
                 </ul></a>
                 <a href="#"><ul class="one_c1a one_c1b">
-                	<img src="images/one_c1a.png" alt="图片" title="图片" />
+                	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />
                     <li class="one_c1ali">zbrush结合photoshop创作卡通插视频教学创作卡通插视频教学创作卡通插视频教学创作卡通插视频教学</li>
                 </ul></a>
             </div>
