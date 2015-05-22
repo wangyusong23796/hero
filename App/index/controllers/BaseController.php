@@ -10,6 +10,12 @@ class BaseController extends CI_Controller{
 	* @return:
 	*/
 	
+	/**
+	*  构造函数 加载网站头部
+	* @date: 2015-4-26
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
 	
 	public function __construct()
 	{
@@ -28,11 +34,33 @@ class BaseController extends CI_Controller{
 		$this->load->view('public/head',$this->data);
 	}
 	
+<<<<<<< HEAD
 	public function gettopdaohang()
 	{
 		return WebDaohang::where('fid','=',0)->get();
 	}
 
+=======
+	public function __construct()
+	{
+		echo 'start';
+	}
+	
+	
+	/**
+	*  析构函数 加载网站底部.
+	* @date: 2015-4-26
+	* @author: 王玉松 admin@wangyusong.com
+	* @return:
+	*/
+	public function __destruct()
+	{
+		
+		
+		echo 'die';
+	}
+	
+>>>>>>> eeaf7f2b9f733634454aec2bce25ae591f2abf7b
 	
 	public function getfoot()
 	{
