@@ -23,6 +23,8 @@ class Index extends BaseController{
 		$this->data['shipin'] = WebDocument::where('typeid','=','2')->get();
 		$this->data['tuwen'] = WebDocument::where('typeid','=','3')->get();
 		
+		//var_dump($this->session->userdata('user'));
+		
 		//var_dump($this->data['zixun'][0]);
 		$this->load->view('index/index');
 		$this->load->view('public/foot');

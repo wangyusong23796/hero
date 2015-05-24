@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
+Source Server         : localhost
 Source Server Version : 50617
 Source Host           : localhost:3306
 Source Database       : hero
@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-22 18:01:57
+Date: 2015-05-24 20:23:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `hero_admin_users`
+-- Table structure for hero_admin_users
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_admin_users`;
 CREATE TABLE `hero_admin_users` (
@@ -36,7 +36,7 @@ INSERT INTO `hero_admin_users` VALUES ('1', 'admin', 'd29haW5pNTIxd2FuZ3l1c29uZ2
 INSERT INTO `hero_admin_users` VALUES ('2', 'wangyusong', 'd29haW5pNTIxd2FuZ3l1c29uZ2RzYWRhc2RzYWRhc2Q=', '王玉松', '', '3');
 
 -- ----------------------------
--- Table structure for `hero_admin_users_groups`
+-- Table structure for hero_admin_users_groups
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_admin_users_groups`;
 CREATE TABLE `hero_admin_users_groups` (
@@ -54,7 +54,7 @@ INSERT INTO `hero_admin_users_groups` VALUES ('1', '超级管理员', '4,5,6,9,1
 INSERT INTO `hero_admin_users_groups` VALUES ('3', '测试用户组', '4,5,6,9,11,19,25,7,10,12,13,14,15,16,17,18,20,21,22,23,24,26', '1');
 
 -- ----------------------------
--- Table structure for `hero_admin_users_routes`
+-- Table structure for hero_admin_users_routes
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_admin_users_routes`;
 CREATE TABLE `hero_admin_users_routes` (
@@ -94,7 +94,7 @@ INSERT INTO `hero_admin_users_routes` VALUES ('26', '文章列表', 'article/ind
 INSERT INTO `hero_admin_users_routes` VALUES ('27', '', '', null, '0');
 
 -- ----------------------------
--- Table structure for `hero_users`
+-- Table structure for hero_users
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_users`;
 CREATE TABLE `hero_users` (
@@ -110,7 +110,7 @@ CREATE TABLE `hero_users` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hero_users_moneys`
+-- Table structure for hero_users_moneys
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_users_moneys`;
 CREATE TABLE `hero_users_moneys` (
@@ -125,7 +125,7 @@ CREATE TABLE `hero_users_moneys` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hero_web_articles`
+-- Table structure for hero_web_articles
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_articles`;
 CREATE TABLE `hero_web_articles` (
@@ -133,15 +133,16 @@ CREATE TABLE `hero_web_articles` (
   `document_id` int(11) DEFAULT NULL COMMENT '继承的id',
   `text` text COMMENT '文章内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf32;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf32;
 
 -- ----------------------------
 -- Records of hero_web_articles
 -- ----------------------------
 INSERT INTO `hero_web_articles` VALUES ('1', '1', 'sadfasdfasdfasdf');
+INSERT INTO `hero_web_articles` VALUES ('2', '5', '123123123');
 
 -- ----------------------------
--- Table structure for `hero_web_article_types`
+-- Table structure for hero_web_article_types
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_article_types`;
 CREATE TABLE `hero_web_article_types` (
@@ -158,7 +159,7 @@ CREATE TABLE `hero_web_article_types` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hero_web_buys`
+-- Table structure for hero_web_buys
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_buys`;
 CREATE TABLE `hero_web_buys` (
@@ -176,7 +177,7 @@ CREATE TABLE `hero_web_buys` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hero_web_configs`
+-- Table structure for hero_web_configs
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_configs`;
 CREATE TABLE `hero_web_configs` (
@@ -199,7 +200,7 @@ CREATE TABLE `hero_web_configs` (
 INSERT INTO `hero_web_configs` VALUES ('1', 'Cg教学网', 'Cg教学网', 'Cg教学网 dsadasd   f ', 'Cg教学网', 'Cg教学网', '1', '250', '350', '1');
 
 -- ----------------------------
--- Table structure for `hero_web_daohangs`
+-- Table structure for hero_web_daohangs
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_daohangs`;
 CREATE TABLE `hero_web_daohangs` (
@@ -218,15 +219,15 @@ CREATE TABLE `hero_web_daohangs` (
 -- ----------------------------
 -- Records of hero_web_daohangs
 -- ----------------------------
-INSERT INTO `hero_web_daohangs` VALUES ('2', '图文资讯', '0', '1', null, null, null, '1', 'pic');
+INSERT INTO `hero_web_daohangs` VALUES ('2', '图文资讯', '0', '1', null, null, null, '1', '');
 INSERT INTO `hero_web_daohangs` VALUES ('3', 'Cg行业新闻', '2', '1', null, null, null, '1', 'news/cg');
 INSERT INTO `hero_web_daohangs` VALUES ('4', '视频教学', '0', '2', null, null, null, '1', '');
-INSERT INTO `hero_web_daohangs` VALUES ('5', '3dmax视频', '4', '2', null, null, null, '1', 'void/3d');
+INSERT INTO `hero_web_daohangs` VALUES ('5', '3dmax视频', '4', '2', null, null, null, '1', 'news/3d');
 INSERT INTO `hero_web_daohangs` VALUES ('6', '素材下载', '0', '3', null, null, null, '1', '');
-INSERT INTO `hero_web_daohangs` VALUES ('7', '图片素材', '6', '3', null, null, null, '1', 'sucai/pic');
+INSERT INTO `hero_web_daohangs` VALUES ('7', '图片素材', '6', '3', null, null, null, '1', 'news/pic');
 
 -- ----------------------------
--- Table structure for `hero_web_documents`
+-- Table structure for hero_web_documents
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_documents`;
 CREATE TABLE `hero_web_documents` (
@@ -241,15 +242,19 @@ CREATE TABLE `hero_web_documents` (
   `click` varchar(255) DEFAULT NULL,
   `typeid` int(11) NOT NULL COMMENT '栏目id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf32;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf32;
 
 -- ----------------------------
 -- Records of hero_web_documents
 -- ----------------------------
-INSERT INTO `hero_web_documents` VALUES ('1', 'cg', '1', '测试数据试试吧', '测试数据试试吧', '测试数据试试吧', '111', '王玉松', '测试数据试试吧', '0');
+INSERT INTO `hero_web_documents` VALUES ('1', 'cg', '1', '测试数据试试吧', '测试数据试试吧', '测试数据试试吧', '111', '王玉松', '1', '1');
+INSERT INTO `hero_web_documents` VALUES ('2', 'cg', '1', 'dfsgsdfg', 'dfgsdfgsdf', 'gsdfgsdf', 'gsdfgsdf', 'gsdfgsd', '1', '1');
+INSERT INTO `hero_web_documents` VALUES ('3', 'cg', '1', 'dasdadasdasd', 'dasdasd', 'as', 'asd', 'asdasd', '1', '1');
+INSERT INTO `hero_web_documents` VALUES ('4', 'cg', '1', 'fsadfasdfa', 'fsdafafdas', 'dsafasd', 'fasd', 'dfsafasd', '1', '1');
+INSERT INTO `hero_web_documents` VALUES ('5', 'about', '1', '关于我们', '111', '1111', '221', '212', '1', '4');
 
 -- ----------------------------
--- Table structure for `hero_web_pics`
+-- Table structure for hero_web_pics
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_pics`;
 CREATE TABLE `hero_web_pics` (
@@ -270,7 +275,26 @@ CREATE TABLE `hero_web_pics` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hero_web_videos`
+-- Table structure for hero_web_types
+-- ----------------------------
+DROP TABLE IF EXISTS `hero_web_types`;
+CREATE TABLE `hero_web_types` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_name` varchar(255) NOT NULL,
+  `type_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of hero_web_types
+-- ----------------------------
+INSERT INTO `hero_web_types` VALUES ('1', '文章类型', '1');
+INSERT INTO `hero_web_types` VALUES ('2', '视频类型', '2');
+INSERT INTO `hero_web_types` VALUES ('3', '图片素材', '3');
+INSERT INTO `hero_web_types` VALUES ('4', '单页类型', '4');
+
+-- ----------------------------
+-- Table structure for hero_web_videos
 -- ----------------------------
 DROP TABLE IF EXISTS `hero_web_videos`;
 CREATE TABLE `hero_web_videos` (
