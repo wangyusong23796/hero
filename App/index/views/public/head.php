@@ -39,7 +39,7 @@
     	<a href="#" target="_blank" ><div class="nav_logo"></div></a>
         <div class="nav_also">
         	   <ul class="also">
-               <a href="<?php site_url('/')?>"><li class="also_a">首页</li></a>
+               <a href="<?php echo site_url('/')?>"><li class="also_a">首页</li></a>
                 <?php foreach($topdaohang as $top):?>
 
                     <li class="also_a"><?php echo $top->name;?>
@@ -54,7 +54,7 @@
                             foreach($two as $t)
                             {
 
-                                echo '<a href="'.$t->url.'"}"><li class="also_boxa1">'.$t->name.'</li></a>';
+                                echo '<a href="'.site_url($t->url).'"}"><li class="also_boxa1">'.$t->name.'</li></a>';
                                 echo '<li class="also_boxa2"></li>';
                             }
                             echo '</ul></div>';
@@ -65,8 +65,8 @@
 
                 <?php endforeach;?>
 
-                <li class="also_a">CG瀑布流</li>
-                <li class="also_a">关于我们</li>
+                <a href="<?php echo site_url('/')?>"><li class="also_a">CG瀑布流</li></a>
+                <a href="<?php echo site_url('index/display/about')?>"><li class="also_a">关于我们</li></a>
             </ul>
         </div>
     </div>

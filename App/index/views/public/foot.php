@@ -9,7 +9,7 @@
             <a href="#"><dd>Unity3d游戏特效实战教程</dd></a>
         </dl>
         <dl class="buttom_a">
-            <dt>热门资讯</dt>
+            <dt>合作伙伴</dt>
             <a href="#"><dd>色彩原理</dd></a>
             <a href="#"><dd>色彩原理</dd></a>
             <a href="#"><dd>色彩原理</dd></a>
@@ -18,7 +18,7 @@
             <a href="#"><dd>色彩原理</dd></a>
         </dl>
         <dl class="buttom_a">
-            <dt>热门资讯</dt>
+            <dt>友情链接</dt>
             <a href="#"><dd>色彩原理</dd></a>
             <a href="#"><dd>色彩原理</dd></a>
             <a href="#"><dd>色彩原理</dd></a>
@@ -27,7 +27,7 @@
             <a href="#"><dd>色彩原理</dd></a>
         </dl>
         <dl class="buttom_a">
-            <dt>热门资讯</dt>
+            <dt>常见问题</dt>
             <a href="#"><dd>色彩原理</dd></a>
             <a href="#"><dd>色彩原理</dd></a>
             <a href="#"><dd>色彩原理</dd></a>
@@ -38,8 +38,8 @@
 
 <div class="buttom_but">
     <dl class="buttom2_box">
-        <dd>POWERED BY ABOUTCG.</dd>
-        <dd>ABOUTCG-CG共和国 沪ICP备11040770号-4</dd>
+        <dd>POWERED BY <?php echo $webconfig['banquan']?>.</dd>
+        <dd><?php echo $webconfig['banquan']?> <?php echo $webconfig['beian']?></dd>
         <dt>
             <a href="">播放器下载</a><span>|</span>
             <a href="">联系我们</a><span>|</span>

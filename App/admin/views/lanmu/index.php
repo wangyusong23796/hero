@@ -85,7 +85,6 @@ $(document).ready(function(){
            <td><?php if($v->name == 1){echo '是';}else{echo '否';}?></td>
            <td><a href="<?php echo site_url('lanmu/edit/'.$v->id)?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('lanmu/delete/'.$v->id)?>">删除</a></td>
 
-
         </tr>
     
         <?php endforeach;?>

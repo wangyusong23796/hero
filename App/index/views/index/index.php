@@ -68,7 +68,7 @@
     <!--one-->
 	<div class="one" style="margin-top:50px;">
     	<div class="one_a">
-        	<P class="one_a1"><span>图文教程</span></P>
+        	<P class="one_a1"><span>视频教程 </span></P>
             <P class="one_a2">制作CG角色”女猎人“的贴图会技巧教程</P>
             <ul class="one_a3">
             	<li class="one_a3a"><span>Posted</span>&nbsp;九&nbsp;21&nbsp;2014 </li>
@@ -118,8 +118,8 @@
 	<!--one-->
 	<div class="one" style="margin-top:65px;">
     	<div class="one_a">
-        	<P class="one_a1"><span>图文教程</span></P>
-            <P class="one_a2">制作CG角色”女猎人“的贴图会技巧教程</P>
+        	<P class="one_a1"><span>最新资讯</span></P>
+            <P class="one_a2"></P>
             <ul class="one_a3">
             	<li class="one_a3a"><span>Posted</span>&nbsp;九&nbsp;21&nbsp;2014 </li>
                 <li class="one_a3a"><span>by</span>&nbsp;Steve&nbsp;Jobs</li>
@@ -129,6 +129,7 @@
         </div>
         <a href="#"><div class="one_b"><img src="/index/images/one_b1.png" alt="图片" title="图片" /></div></a>
         <div class="one_c">
+
         	<div class="one_c1">
             	<a href="#"><ul class="one_c1a">
                 	<img src="/index/images/one_c1a.png" alt="图片" title="图片" />

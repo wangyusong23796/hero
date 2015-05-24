@@ -29,7 +29,15 @@
         <option value="<?php echo $v->id?>"><?php echo $v->name?></option>
     <?php endforeach; ?>
     </select> <i>多个关键字用,隔开</i></li>
-    <li><label>栏目类型</label><cite><input name="type" type="radio" value="1" checked="checked" />图文教学&nbsp;&nbsp;&nbsp;&nbsp;</cite><input name="type" type="radio" value="2" />素材下载&nbsp;&nbsp;&nbsp;&nbsp;</cite><input name="type" type="radio" value="3" />视频</li>
+    <li><label>栏目类型</label>
+    <cite>
+    <?php foreach($type as $t):?>
+
+<input name="type" type="radio" value="<?php echo $t->type_id;?>" checked="checked" /><?php echo $t->type_name;?>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <?php endforeach;?>
+    </cite>
+</li>
     <li><label>是否显示</label><cite><input name="display" type="radio" value="1" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;<input name="display" type="radio" value="0" />否</cite></li>
     <li><label>网站栏目视图</label><input name="listviewpath" type="text" class="dfinput"   /></li>
     <li><label>网站内页视图</label><input name="articleviewpath" type="text" class="dfinput"  /></li>

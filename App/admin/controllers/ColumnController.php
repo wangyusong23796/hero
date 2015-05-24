@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 require 'BaseController.php';
@@ -10,6 +11,7 @@ class ColumnController extends BaseController{
 		parent::__construct();
 		$this->load->helper('form');
 		$this->load->model('WebDaohang');
+		$this->load->model('WebType');
 	}
 	
 	
@@ -22,11 +24,14 @@ class ColumnController extends BaseController{
 		$this->load->view('lanmu/index',$data);
 	}
 	
+	
+	
 	public function add()
 	{
 		$data['name'] = '添加网站栏目';
 		$daohang = WebDaohang::all();
 		$data['lanmu'] = $daohang;
+		$data['type'] = WebType::all();
 		if($this->input->post())
 		{
 			$daohang = new WebDaohang();
