@@ -25,7 +25,6 @@
     <li><label>父级栏目</label><select name="fid">
     <option value="0">顶级栏目</option>
     <?php foreach($lanmu as $v):?>
-
         <option value="<?php echo $v->id?>"><?php echo $v->name?></option>
     <?php endforeach; ?>
     </select> <i>多个关键字用,隔开</i></li>

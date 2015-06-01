@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-06-02 10:49:25
+-- Generation Time: 2015-06-02 12:00:38
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -255,11 +255,11 @@ CREATE TABLE IF NOT EXISTS `hero_web_daohangs` (
 
 INSERT INTO `hero_web_daohangs` (`id`, `name`, `fid`, `type`, `listviewpath`, `articleviewpath`, `viewpath`, `display`, `url`) VALUES
 (2, '图文资讯', '0', '1', NULL, NULL, NULL, 1, ''),
-(3, 'Cg行业新闻', '2', '1', NULL, NULL, NULL, 1, 'news/cg'),
+(3, 'Cg行业新闻', '2', '1', NULL, NULL, NULL, 1, 'cg'),
 (4, '视频教学', '0', '2', NULL, NULL, NULL, 1, ''),
-(5, '3dmax视频', '4', '2', NULL, NULL, NULL, 1, 'news/3d'),
+(5, '3dmax视频', '4', '2', NULL, NULL, NULL, 1, '3d'),
 (6, '素材下载', '0', '3', NULL, NULL, NULL, 1, ''),
-(7, '图片素材', '6', '3', NULL, NULL, NULL, 1, 'news/pic');
+(7, '图片素材', '6', '3', NULL, NULL, NULL, 1, 'pic');
 
 -- --------------------------------------------------------
 
@@ -278,6 +278,10 @@ CREATE TABLE IF NOT EXISTS `hero_web_documents` (
   `auther` varchar(255) DEFAULT NULL,
   `click` varchar(255) DEFAULT NULL,
   `typeid` int(11) NOT NULL COMMENT '栏目id',
+  `daohang_id` int(11) NOT NULL DEFAULT '0',
+  `create_time` datetime DEFAULT NULL,
+  `pinglun` int(255) DEFAULT NULL,
+  `pic_url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf32 AUTO_INCREMENT=6 ;
 
@@ -285,12 +289,12 @@ CREATE TABLE IF NOT EXISTS `hero_web_documents` (
 -- 转存表中的数据 `hero_web_documents`
 --
 
-INSERT INTO `hero_web_documents` (`id`, `lanmumingcheng`, `article_id`, `title`, `key`, `desc`, `picurl`, `auther`, `click`, `typeid`) VALUES
-(1, 'cg', 1, '测试数据试试吧', '测试数据试试吧', '测试数据试试吧', '111', '王玉松', '1', 1),
-(2, 'cg', 1, 'dfsgsdfg', 'dfgsdfgsdf', 'gsdfgsdf', 'gsdfgsdf', 'gsdfgsd', '1', 1),
-(3, 'cg', 1, 'dasdadasdasd', 'dasdasd', 'as', 'asd', 'asdasd', '1', 1),
-(4, 'cg', 1, 'fsadfasdfa', 'fsdafafdas', 'dsafasd', 'fasd', 'dfsafasd', '1', 1),
-(5, 'about', 1, '关于我们', '111', '1111', '221', '212', '1', 4);
+INSERT INTO `hero_web_documents` (`id`, `lanmumingcheng`, `article_id`, `title`, `key`, `desc`, `picurl`, `auther`, `click`, `typeid`, `daohang_id`, `create_time`, `pinglun`, `pic_url`) VALUES
+(1, 'cg', 1, '测试数据试试吧', '测试数据试试吧', '测试数据试试吧', '111', '王玉松', '1', 1, 3, NULL, NULL, NULL),
+(2, 'cg', 1, 'dfsgsdfg', 'dfgsdfgsdf', 'gsdfgsdf', 'gsdfgsdf', 'gsdfgsd', '1', 1, 3, NULL, NULL, NULL),
+(3, 'cg', 1, 'dasdadasdasd', 'dasdasd', 'as', 'asd', 'asdasd', '1', 1, 3, NULL, NULL, NULL),
+(4, 'cg', 1, 'fsadfasdfa', 'fsdafafdas', 'dsafasd', 'fasd', 'dfsafasd', '1', 1, 3, NULL, NULL, NULL),
+(5, 'about', 1, '关于我们', '111', '1111', '221', '212', '1', 4, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

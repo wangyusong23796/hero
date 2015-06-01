@@ -22,8 +22,13 @@ class news extends BaseController
 		if(empty($article->toArray()))
 			show_404();
 		
+		//判断是否购买.
 		
-		//TODO 根据传递进来的id判断栏目类型.并显示相应的模板.
+		
+		// 已经购买直接显示 未购买跳转到购买页
+	
+		
+		
 		
 		
 		
@@ -36,18 +41,20 @@ class news extends BaseController
 	{
 		if($name == NULL)
 			show_404();
-		$document = $this->_findlanmu($name);
-		if(empty($document->toArray()))
-			show_404();
+
 		
 		//根据栏目名称寻找栏目配置.
-		
+		$daohang = $this->_finddaohang($name);
+		if($daohang === false){
+			show_404();
+		}
 		//根据配置加载相应的视图.
 		
-		$this->data['name'] = $document->title; 
+		$this->data['name'] = $daohang['0']->name;
 		
-		//var_dump($document);
-		$this->load->view('public/head',$this->data);
+		$this->data['article'] = $this->_Document_daohang($daohang['0']->id);
+		
+		$this->load->view('public/head_article',$this->data);
 		$this->load->view('news/index');
 		$this->load->view('public/foot');
 	}
@@ -63,7 +70,12 @@ class news extends BaseController
 		return  $document;
 	}
 	
-	
+	public function _Document_daohang($type)
+	{
+		$document= WebDocument::where('daohang_id','=',$type)->get();
+
+		return  $document;
+	}
 	
 	
 	public function _Document_find($id)
@@ -86,6 +98,20 @@ class news extends BaseController
 		foreach($web as $a)
 			$web = $a;
 		return $web;
+	}
+	
+	public function _finddaohang($lanmuname)
+	{
+		//判断有没有此栏目.
+		$this->load->model('WebDaohang');
+		$daohang = WebDaohang::where('url','=',$lanmuname)->get();
+		$a = $daohang->toArray();
+		if(empty($a)){
+			return false;
+		}
+
+		return $daohang;
+
 	}
 	
 }
