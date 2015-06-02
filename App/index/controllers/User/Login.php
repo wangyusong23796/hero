@@ -14,11 +14,8 @@ class Login extends CI_Controller
 	{
 		$this->_is_login();
 		
-		//TODO 显示login视图.
 		$this->data['name'] = '登陆';
-		$this->load->view('public/head',$this->data);
-		
-		$this->load->view('public/foot');
+		$this->load->view('user/login/index');
 	}
 	
 	public function returnindex()
@@ -66,17 +63,9 @@ class Login extends CI_Controller
 		$this->_is_login();
 		//TODO 显示reg视图
 		$this->data['name'] = '注册';
-		$this->load->view('public/head',$this->data);
-		$this->load->view('public/foot');
+		$this->load->view('user/login/reg');
 	}
 	
-	public function returnreg()
-	{
-		//返回的注册
-		
-	}
-	
-
 	public function logout()
 	{
 			$this->session->set_flashdata('info',NULL);

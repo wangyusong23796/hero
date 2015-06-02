@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-06-02 11:57:11
+-- Generation Time: 2015-06-02 10:49:25
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -347,24 +347,6 @@ CREATE TABLE IF NOT EXISTS `hero_web_videos` (
   `money` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COMMENT='此张表是视频表.' AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `users`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(32) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `nikename` varchar(32) NOT NULL,
-  `via` varchar(255) DEFAULT NULL,
-  `uid` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `logintime` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
