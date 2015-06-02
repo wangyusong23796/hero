@@ -44,10 +44,10 @@ class news extends BaseController
 		
 		//根据配置加载相应的视图.
 		
-
+		$this->data['name'] = $document->title; 
 		
 		//var_dump($document);
-		
+		$this->load->view('public/head',$this->data);
 		$this->load->view('news/index');
 		$this->load->view('public/foot');
 	}

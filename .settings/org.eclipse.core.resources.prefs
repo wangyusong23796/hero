@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+encoding//App/index=UTF-8
+encoding//App/index/libraries/Provider=UTF-8
+encoding//App/index/libraries/oauth2=UTF-8
+encoding//vendor/nesbot=UTF-8
 encoding/<project>=UTF-8

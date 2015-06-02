@@ -65,7 +65,7 @@ class ColumnController extends BaseController{
 		$this->load->view('lanmu/edit',$data);
 	}
 	
-	public function update()
+	public function update($id)
 	{
 		if ($this->input->post())
 		{

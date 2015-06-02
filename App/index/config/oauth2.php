@@ -2,8 +2,8 @@
 
 //xx代表每个provider的唯一标识，也就是文件名的小写
 $config['oauth2']['qq'] = array(
-    'id' => 'your app client id',
-    'secret' => 'your app client secret'
+    'id' => '101218869',
+    'secret' => '22498574e68099c54e491ccf3febc6a9'
 );
 $config['oauth2']['tweibo'] = array(
     'id' => '801565505',

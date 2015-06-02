@@ -25,8 +25,6 @@ class BaseController extends CI_Controller{
 		$this->data['topdaohang'] = $this->gettopdaohang();
 		
 		$this->data['foot'] = $this->getfoot(); 
-
-		$this->load->view('public/head',$this->data);
 	}
 	
 
@@ -44,6 +42,7 @@ class BaseController extends CI_Controller{
 	* @author: 王玉松 admin@wangyusong.com
 	* @return:
 	*/
+	
 	public function __destruct()
 	{
 		

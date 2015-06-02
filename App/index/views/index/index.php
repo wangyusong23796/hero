@@ -1,4 +1,5 @@
 <!--banner-->
+<link href="/index/style/index.css" rel="stylesheet" type="text/css" />
 <div class="banner_bg"></div>
 <div class="banner">
 	<div class="banner_tv">

@@ -16,27 +16,29 @@ class ArticleController extends BaseController{
 	
 	public function add()
 	{
-	
+		$this->load->view('article/add');
 	}
 	
 	public function index()
 	{
-	
+		$this->load->view('article/index');
 	}
 	
 	public function update()
 	{
-	
+		
 	}
 	
 	public function delete()
 	{
-	
+		//WebDaohang::destroy($id);
+		return redirect('article/index');
 	}
 	
 	public function edit()
 	{
-	
+		
+		$this->load->view('article/edit');
 	}
 	
 	

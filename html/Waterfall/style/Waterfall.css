@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{padding:0; margin:0; font-size:12px; font-family:"微软雅黑";}
+a{text-decoration:none; color:#000;}
+img{display:block;border:none 0;}
+li{list-style:none;}
+
+/*Waterfall*/
+.Waterfall{width: 1100px; height:auto; margin: 0 auto;}
+.Waterfall_top{width: 1100px; height: 110px;}
+.Waterfall_1{width: 1100px; height: 45px; text-align: center;}
+.Waterfall_1 span{font-size: 30px; color: #356eb5; border-bottom: #356eb5 2px solid; padding-bottom: 10px;}
+.Waterfall_2{width: 1100px; height: 58px; line-height: 58px; text-align: center; font-size: 18px; font-family:"微软雅黑";}
+
+.Waterfall_but{width: 1100px;  height:1857px; background-image:url(../images/Waterfall_4.png);}
+.Waterfall_3{height: 47px; float: left; margin-top:20px;}
+.Waterfall_3aon{width: 80px; height: 28px; line-height: 28px; text-align: center; border-radius: 3px; background: #38e0e9; float: left; color: #fff; margin-left: 20px;}
+.Waterfall_3a{width: 80px; height: 28px; line-height: 28px; cursor: pointer; text-align: center; border-radius: 3px; background: #000; color: #fff; float: left; margin-left: 20px;}
+
+.Waterfall_4{width: 1100px; overflow:hidden; float:left;}
+
+.piece{width:151px; height:260px; float:left; margin:34px 34px 0px;}
+.piece img{width:151px; height:151px;}
+.piece dt{width:151px; max-height:72px; margin-top:12px; line-height:24px; overflow:hidden; font-size:16px;font-family:Arial, "宋体", Helvetica, sans-serif; text-align:center;word-wrap : break-word;white-space:normal;word-break:break-all }
+.piece dd{width:151px; height:24px; line-height:24px; text-align:center; color:#3dbe93; letter-spacing:3px; font-size:12px;font-family:Arial, "宋体", Helvetica, sans-serif;}
+
+/*页码*/
+.left_b2{height:20px; float:left; padding-top:16px;}
+.left_b2a{height:20px; line-height:20px; width:60px; text-align:center; margin-left:5px; background-color:#d0cece; float:left; cursor: pointer;}
+.left_b2b{height:20px; line-height:20px; width:20px; border-radius:2px; text-align:center; margin-left:5px; background-color:#d0cece; float:left; cursor: pointer;}
+.left_b2a:hover{ background-color:#58c09d; color:white;}
+.left_b2b:hover{ background-color:#58c09d; color:white;}
+.left_b2bon{height:20px; line-height:20px; width:20px; border-radius:2px; color:white; text-align:center; margin-left:5px; background:#58c09d; float:left; cursor: pointer;}
+
+
+
+
+

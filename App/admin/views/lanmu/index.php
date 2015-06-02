@@ -81,7 +81,16 @@ $(document).ready(function(){
     <tbody>
         <?php foreach($lanmu as $v):?>
         <tr>
-           <td><?php echo $v->name;?></td>
+
+           <td><?php
+            if($v->fid == 0)
+            {
+                echo $v->name; 
+            }else{
+                echo "--".$v->name;
+            }
+
+           ?></td>
            <td><?php if($v->name == 1){echo '是';}else{echo '否';}?></td>
            <td><a href="<?php echo site_url('lanmu/edit/'.$v->id)?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('lanmu/delete/'.$v->id)?>">删除</a></td>
 

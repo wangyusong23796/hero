@@ -1,14 +1,11 @@
+<link href="/index/style/Waterfall.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/index/jQuery/Waterfall.js"></script>
 <!--页面顺序-->
 <ul class="shunxu">
-    <li class="shunxu1">页面顺序</li>
-    <li class="shunxu2">》</li>
-    <li class="shunxu1">页面顺序</li>
-    <li class="shunxu2">》</li>
-    <li class="shunxu1">页面顺序</li>
-    <li class="shunxu2">》</li>
-    <li class="shunxu1">页面顺序</li>
-    <li class="shunxu2">》</li>
-    <li class="shunxu1">页面顺序</li>
+    <li class="shunxu1">首页</li>
+    <li class="shunxu2">></li>
+    <li class="shunxu1">图文资讯</li>
+
 </ul>
 
 <div class="Waterfall">

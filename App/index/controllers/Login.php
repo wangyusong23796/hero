@@ -56,6 +56,6 @@ class Login extends CI_Controller {
 				$this->session->set_flashdata('info', '操作失败<pre>'.$e.'</pre>');
 			}
 		}
-		redirect();
+		redirect(site_url('user/login/returnindex'));
 	}
 }
