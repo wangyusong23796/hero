@@ -82,11 +82,12 @@ $route['lanmu/edit/(:num)'] = 'ColumnController/index/$1';
 
 
 //文章管理
-$route['article/index'] = 'ArticleController/index';
-// $route['lanmu/add'] = 'ColumnController/add';
-// $route['lanmu/update'] = 'ColumnController/update';
-// $route['lanmu/delete/(:num)'] = 'ColumnController/delete/$1';
-// $route['lanmu/edit/(:num)'] = 'ColumnController/index/$1';
+// $route['article/index'] = 'ArticleController/index';
+$route['article/index/(:num)'] = 'ArticleController/index/$1';
+$route['article/add'] = 'ArticleController/add';
+$route['article/edit/(:num)'] = 'ArticleController/edit/$1';
+$route['article/delete/(:num)'] = 'ArticleController/delete/$1';
+$route['article/update'] = 'ArticleController/update';
 //用户控制
 
 $route['user/show'] = 'UserController/show';

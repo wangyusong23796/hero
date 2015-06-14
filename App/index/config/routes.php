@@ -52,6 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Index';
 
 $route['news/(:any)'] = 'news/index/$1';
+$route['news/(:any)/(:num)'] = 'news/index/$1/$2';
+// $route['news/search/(:any)'] = 'news/search/$1';
+// $route['news/search/(:any)/(:num)'] = 'news/search/$1/$2';
+
 
 $route['display/(:any)'] = 'index/display/$1';
 

@@ -8,6 +8,7 @@ class UserController extends CI_Controller
 	{
 		parent::__construct();
 		$this->_isUser();
+		$this->data['user'] = $this->session->userdata('user');
 	}
 	
 	public function _isUser()

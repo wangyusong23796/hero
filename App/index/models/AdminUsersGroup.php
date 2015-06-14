@@ -1,5 +1,4 @@
-<?php namespace App\admin\models;
-
+<?php 
 use Illuminate\Database\Eloquent\Model;
 
 /**

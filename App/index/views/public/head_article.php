@@ -65,7 +65,7 @@
                             foreach($two as $t)
                             {
 
-                                echo '<a href="'.site_url($t->url).'"}"><li class="also_boxa1">'.$t->name.'</li></a>';
+                                echo '<a href="'.site_url("news/".$t->url).'"}"><li class="also_boxa1">'.$t->name.'</li></a>';
                                 echo '<li class="also_boxa2"></li>';
                             }
                             echo '</ul></div>';
