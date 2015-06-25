@@ -75,9 +75,9 @@ class AdminUserController extends BaseController {
 	
 	public function create()
 	{
-	
-		
-	}
+
+		$this->load->view('adminuser/create');
+	}	
 	
 	
 }
