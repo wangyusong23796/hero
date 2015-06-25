@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>网站管理后台 -</title>
+<title>网站管理后台 - <?php echo $name?></title>
 </head>
 <frameset rows="88,*" cols="*" frameborder="no" border="0" framespacing="0">
   <frame src="<?php echo site_url('top');?>" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
